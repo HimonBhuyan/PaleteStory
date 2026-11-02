@@ -791,10 +791,10 @@ export const HomePage = () => {
 
             <div className="lg:col-span-6 grid grid-cols-2 gap-4">
               <div className="rounded-2xl overflow-hidden border border-amber-500/30 shadow-xl group">
-                <img src="./assets/images/cropped/live_music_poster.jpg" alt="Rahul Gohain Live Music" className="w-full h-64 sm:h-72 object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src="./assets/images/generated/live_singer_poster_hd.jpg" alt="Rahul Gohain Live Music" className="w-full h-64 sm:h-72 object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
               <div className="rounded-2xl overflow-hidden border border-amber-500/30 shadow-xl group">
-                <img src="./assets/images/cropped/live_musician.jpg" alt="Acoustic Singer on Stage" className="w-full h-64 sm:h-72 object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src="./assets/images/generated/live_guitar_performance_hd.jpg" alt="Acoustic Singer on Stage" className="w-full h-64 sm:h-72 object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
             </div>
 
@@ -810,18 +810,18 @@ export const HomePage = () => {
             <div className="lg:col-span-6 grid grid-cols-2 gap-4">
               <div className="space-y-4">
                 <div className="rounded-2xl overflow-hidden border border-neutral-800 shadow-lg">
-                  <img src="./assets/images/cropped/varenya_birthday.jpg" alt="Birthday Party" className="w-full h-48 sm:h-56 object-cover" />
+                  <img src="./assets/images/generated/party_balloon_milestone_hd.jpg" alt="1st Birthday Milestone Balloon Arch" className="w-full h-48 sm:h-56 object-cover" />
                 </div>
                 <div className="rounded-2xl overflow-hidden border border-neutral-800 shadow-lg">
-                  <img src="./assets/images/cropped/interior_birthday.jpg" alt="Birthday Balloons" className="w-full h-48 sm:h-56 object-cover" />
+                  <img src="./assets/images/generated/celebration_party_hd.jpg" alt="Celebration Hall Setup" className="w-full h-48 sm:h-56 object-cover" />
                 </div>
               </div>
               <div className="space-y-4 pt-6">
                 <div className="rounded-2xl overflow-hidden border border-neutral-800 shadow-lg">
-                  <img src="./assets/images/cropped/birthday_memories.jpg" alt="Making Memories Around Our Table" className="w-full h-48 sm:h-56 object-cover" />
+                  <img src="./assets/images/generated/party_family_moments_hd.jpg" alt="Family Celebrating Birthday Around Our Table" className="w-full h-48 sm:h-56 object-cover" />
                 </div>
                 <div className="rounded-2xl overflow-hidden border border-neutral-800 shadow-lg">
-                  <img src="./assets/images/cropped/custom_party_menu.jpg" alt="Custom Party Menus Crafted" className="w-full h-48 sm:h-56 object-cover" />
+                  <img src="./assets/images/generated/food_spread_hd.jpg" alt="Custom Party Feasts & Menus Crafted" className="w-full h-48 sm:h-56 object-cover" />
                 </div>
               </div>
             </div>
@@ -952,12 +952,12 @@ export const HomePage = () => {
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
             {[
-              './assets/images/cropped/bubblegum_bliss.jpg',
-              './assets/images/cropped/balcony_girl.jpg',
-              './assets/images/cropped/teriyaki_chicken.jpg',
-              './assets/images/cropped/blue_lagoon.jpg',
-              './assets/images/cropped/romesco_prawns.jpg',
-              './assets/images/cropped/chef_artists.jpg'
+              './assets/images/generated/signature_mocktails_hd.jpg',
+              './assets/images/generated/balcony_hero_hd.jpg',
+              './assets/images/generated/teriyaki_chicken_hd.jpg',
+              './assets/images/generated/interior_hero_hd.jpg',
+              './assets/images/generated/lassoni_tikka_hd.jpg',
+              './assets/images/generated/food_spread_hd.jpg'
             ].map((imgSrc, i) => (
               <div key={i} className="img-zoom-wrap rounded-xl overflow-hidden aspect-square border border-neutral-800">
                 <img src={imgSrc} alt="Instagram Post" className="w-full h-full object-cover" />
