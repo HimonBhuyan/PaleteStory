@@ -154,26 +154,26 @@ export const GalleryPage = () => {
     <div className="flex flex-col min-h-screen">
       
       {/* Header */}
-      <section className="relative py-16 bg-neutral-950 border-b border-neutral-900">
+      <section className="relative py-12 sm:py-16 bg-neutral-950 border-b border-neutral-900 overflow-hidden">
         <div className="hero-ambient-glow"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <span className="gold-badge text-xs font-bold px-3.5 py-1.5 rounded-full uppercase tracking-widest inline-block mb-3">
             Visual Journey
           </span>
-          <h1 className="text-4xl sm:text-5xl font-display font-extrabold text-white">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-white">
             Moments Captured At Palate Story
           </h1>
-          <p className="text-neutral-400 max-w-2xl mx-auto text-sm sm:text-base mt-3 font-light">
+          <p className="text-neutral-400 max-w-2xl mx-auto text-xs sm:text-sm md:text-base mt-3 font-light px-2">
             Immerse yourself in our candlelit interiors, breezy balcony vistas, artfully plated culinary creations, and soulful live weekend sessions.
           </p>
 
           {/* Filter Pills */}
-          <div className="flex flex-wrap items-center justify-center gap-2 mt-8">
+          <div className="flex flex-wrap items-center justify-center gap-2 mt-6 sm:mt-8 max-w-full">
             {filterTabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveFilter(tab.id)}
-                className={`px-4 py-2 rounded-full text-xs font-bold transition-all ${
+                className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-xs font-bold transition-all ${
                   activeFilter === tab.id
                     ? 'bg-amber-500 text-black shadow-md'
                     : 'text-neutral-300 hover:text-white bg-neutral-900 hover:bg-neutral-800 border border-neutral-800'
@@ -187,9 +187,9 @@ export const GalleryPage = () => {
       </section>
 
       {/* Gallery Grid */}
-      <main className="py-14 bg-[#0e0f12] flex-grow">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <main className="py-10 sm:py-14 bg-[#0e0f12] flex-grow overflow-hidden">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
             {visibleItems.map((item, idx) => (
               <div
                 key={idx}

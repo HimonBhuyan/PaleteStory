@@ -43,9 +43,9 @@ export const MenuPage = () => {
     <div className="flex flex-col min-h-screen">
       
       {/* Menu Header */}
-      <section className="relative py-16 bg-neutral-950 border-b border-neutral-900">
+      <section className="relative py-12 sm:py-16 bg-neutral-950 border-b border-neutral-900 overflow-hidden">
         <div className="hero-ambient-glow"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <span className="gold-badge text-xs font-bold px-3.5 py-1.5 rounded-full uppercase tracking-widest inline-block mb-3">
             Artisanal Dining Experience
           </span>

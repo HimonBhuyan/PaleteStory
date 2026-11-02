@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { NavLink, Link, useLocation } from 'react-router-dom';
 import { ShoppingBag, Calendar, Menu, X, Home, Utensils, Heart, Camera, GlassWater, Music, MapPin, HelpCircle, Sun, Moon } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import { useTheme } from '../context/ThemeContext';
@@ -9,7 +9,25 @@ export const Navbar = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const { getItemCount } = useCart();
   const { theme, toggleTheme, isDark } = useTheme();
+  const location = useLocation();
   const itemCount = getItemCount();
+
+  // Close drawer on route change
+  useEffect(() => {
+    setIsDrawerOpen(false);
+  }, [location.pathname, location.hash]);
+
+  // Lock body scroll when mobile drawer is open
+  useEffect(() => {
+    if (isDrawerOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isDrawerOpen]);
 
   const navLinks = [
     { to: '/', label: 'Home', icon: Home },
@@ -33,15 +51,15 @@ export const Navbar = () => {
           <div className="flex items-center justify-between h-20">
             
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-3 group">
-              <div className="w-12 h-12 rounded-full overflow-hidden bg-black/60 border border-amber-500/40 p-0.5 flex items-center justify-center shadow-lg group-hover:border-amber-400 transition-all">
+            <Link to="/" className="flex items-center gap-2.5 sm:gap-3 group shrink-0">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden bg-black/60 border border-amber-500/40 p-0.5 flex items-center justify-center shadow-lg group-hover:border-amber-400 transition-all shrink-0">
                 <img src="./assets/images/cropped/logo.png" alt="Palate Story Logo" className="w-full h-full object-cover" />
               </div>
               <div className="flex flex-col">
-                <span className="font-display font-extrabold text-xl tracking-wider text-white group-hover:text-amber-400 transition-colors">
+                <span className="font-display font-extrabold text-base sm:text-xl tracking-wider text-white group-hover:text-amber-400 transition-colors">
                   {CAFE_INFO.name}
                 </span>
-                <span className="text-[9px] tracking-[0.25em] text-amber-400/90 font-medium">
+                <span className="text-[8px] sm:text-[9px] tracking-[0.2em] sm:tracking-[0.25em] text-amber-400/90 font-medium">
                   INDIAN • CHINESE • CONTINENTAL
                 </span>
               </div>
@@ -129,16 +147,20 @@ export const Navbar = () => {
       {/* Mobile Drawer Backdrop */}
       {isDrawerOpen && (
         <div
-          className="fixed inset-0 bg-black/75 backdrop-blur-sm z-50 transition-opacity"
+          className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 transition-opacity duration-300"
           onClick={closeDrawer}
+          aria-hidden="true"
         />
       )}
 
       {/* Mobile Drawer */}
       <aside
-        className={`fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-[#181a20] z-50 p-6 flex flex-col transition-transform duration-300 ease-in-out border-l border-amber-500/30 ${
-          isDrawerOpen ? 'translate-x-0 shadow-2xl' : 'translate-x-full'
+        className={`fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-[#181a20] z-50 p-6 flex flex-col transition-all duration-300 ease-in-out border-l border-amber-500/30 overflow-y-auto ${
+          isDrawerOpen 
+            ? 'translate-x-0 shadow-2xl opacity-100 pointer-events-auto visible' 
+            : 'translate-x-full opacity-0 pointer-events-none invisible'
         }`}
+        aria-hidden={!isDrawerOpen}
       >
         <div className="flex items-center justify-between pb-6 border-b border-neutral-800">
           <div className="flex items-center gap-3">

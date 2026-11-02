@@ -37,12 +37,27 @@
   scroll-behavior: smooth;
 }
 
+html {
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+}
+
 body {
   background-color: var(--bg-primary);
   color: var(--text-main);
   font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+  position: relative;
   -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
 }
 
 .font-serif {
@@ -327,10 +342,12 @@ body {
   top: -150px;
   left: 50%;
   transform: translateX(-50%);
-  width: 900px;
-  height: 600px;
+  width: min(900px, 95vw);
+  max-width: 100%;
+  height: 450px;
   background: radial-gradient(circle, rgba(217, 119, 6, 0.22) 0%, rgba(56, 93, 73, 0.1) 45%, rgba(14, 15, 18, 0) 70%);
   filter: blur(80px);
   pointer-events: none;
   z-index: 1;
+  overflow: hidden;
 }

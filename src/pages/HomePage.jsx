@@ -235,7 +235,7 @@ export const HomePage = () => {
               </div>
 
               {/* Main Headline */}
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-extrabold tracking-tight text-white leading-[1.1]">
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-extrabold tracking-tight text-white leading-[1.15]">
                 Igniting Your Taste Buds With Every Dish, 
                 <span className="gold-gradient-text block mt-1.5">One Bite At A Time.</span>
               </h1>
@@ -426,14 +426,14 @@ export const HomePage = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 p-3 sm:p-4 rounded-2xl bg-black/60 backdrop-blur-xl border border-white/10 shadow-2xl">
             
             {/* 5 Interactive Scene Pills */}
-            <div className="flex flex-wrap items-center gap-2 sm:gap-3 w-full md:w-auto justify-center md:justify-start">
+            <div className="flex items-center gap-2 sm:gap-3 w-full md:w-auto overflow-x-auto pb-1 sm:pb-0 scrollbar-none justify-start md:justify-start">
               {HERO_SCENES.map((scene, idx) => {
                 const isActive = idx === activeSlide;
                 return (
                   <button
                     key={scene.id}
                     onClick={() => handleSelectSlide(idx)}
-                    className={`relative px-3.5 py-2 rounded-xl text-xs font-semibold transition-all overflow-hidden ${
+                    className={`relative px-3 sm:px-3.5 py-2 rounded-xl text-xs font-semibold transition-all overflow-hidden shrink-0 ${
                       isActive
                         ? 'bg-amber-500/20 text-amber-300 border border-amber-500/60 shadow-lg'
                         : 'bg-white/5 hover:bg-white/10 text-neutral-300 border border-white/5 hover:border-white/20'
