@@ -98,7 +98,7 @@ export const ExperiencesPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="glass-card rounded-2xl overflow-hidden border border-neutral-800 flex flex-col">
               <div className="h-48 overflow-hidden relative">
-                <img src="./assets/images/cropped/live_musician.jpg" alt="Acoustic Friday" className="w-full h-full object-cover" />
+                <img src="./assets/images/generated/live_music_hd.jpg" alt="Acoustic Friday" className="w-full h-full object-cover" />
                 <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-amber-500 text-black text-[10px] font-bold uppercase">
                   Fridays • 8 PM
                 </div>
@@ -118,7 +118,7 @@ export const ExperiencesPage = () => {
 
             <div className="glass-card rounded-2xl overflow-hidden border border-neutral-800 flex flex-col">
               <div className="h-48 overflow-hidden relative">
-                <img src="./assets/images/cropped/lassoni_tikka.jpg" alt="Kebab Platter Nights" className="w-full h-full object-cover" />
+                <img src="./assets/images/generated/lassoni_tikka_hd.jpg" alt="Kebab Platter Nights" className="w-full h-full object-cover" />
                 <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-amber-500 text-black text-[10px] font-bold uppercase">
                   Saturdays • 8 PM
                 </div>
@@ -138,7 +138,7 @@ export const ExperiencesPage = () => {
 
             <div className="glass-card rounded-2xl overflow-hidden border border-neutral-800 flex flex-col">
               <div className="h-48 overflow-hidden relative">
-                <img src="./assets/images/cropped/balcony_girl.jpg" alt="Sunday Sunset Balcony" className="w-full h-full object-cover" />
+                <img src="./assets/images/generated/balcony_hero_hd.jpg" alt="Sunday Sunset Balcony" className="w-full h-full object-cover" />
                 <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-amber-500 text-black text-[10px] font-bold uppercase">
                   Sundays • 5:00 PM
                 </div>

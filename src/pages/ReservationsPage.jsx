@@ -258,7 +258,7 @@ export const ReservationsPage = () => {
 
                 <div className="space-y-4">
                   <div className="flex items-center gap-4 p-3 rounded-xl bg-neutral-900/60 border border-neutral-800">
-                    <img src="./assets/images/cropped/balcony_patio.jpg" alt="Balcony" className="w-16 h-16 rounded-lg object-cover shrink-0" />
+                    <img src="./assets/images/generated/balcony_hero_hd.jpg" alt="Balcony" className="w-16 h-16 rounded-lg object-cover shrink-0" />
                     <div>
                       <h4 className="text-xs font-bold text-white">Outdoor Balcony Patio</h4>
                       <p className="text-[11px] text-neutral-400">Natural breeze, plants & city skyline view. Perfect for evening coffee & starters.</p>
@@ -266,7 +266,7 @@ export const ReservationsPage = () => {
                   </div>
 
                   <div className="flex items-center gap-4 p-3 rounded-xl bg-neutral-900/60 border border-neutral-800">
-                    <img src="./assets/images/cropped/maps_main_interior.jpg" alt="Romantic Decor" className="w-16 h-16 rounded-lg object-cover shrink-0" />
+                    <img src="./assets/images/generated/interior_hero_hd.jpg" alt="Romantic Decor" className="w-16 h-16 rounded-lg object-cover shrink-0" />
                     <div>
                       <h4 className="text-xs font-bold text-white">Romantic Heart Ambience</h4>
                       <p className="text-[11px] text-neutral-400">Hanging red hearts & warm cane glow for unforgettable anniversaries & dates.</p>
@@ -274,7 +274,7 @@ export const ReservationsPage = () => {
                   </div>
 
                   <div className="flex items-center gap-4 p-3 rounded-xl bg-neutral-900/60 border border-neutral-800">
-                    <img src="./assets/images/cropped/booth_seating.jpg" alt="Cozy Booth" className="w-16 h-16 rounded-lg object-cover shrink-0" />
+                    <img src="./assets/images/generated/interior_hero_hd.jpg" alt="Cozy Booth" className="w-16 h-16 rounded-lg object-cover shrink-0" />
                     <div>
                       <h4 className="text-xs font-bold text-white">Plush Sage Booths</h4>
                       <p className="text-[11px] text-neutral-400">Padded banquette seating with directional lamps for private conversations.</p>

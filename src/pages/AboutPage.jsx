@@ -31,7 +31,7 @@ export const AboutPage = () => {
             {/* Left: Photos */}
             <div className="lg:col-span-6 space-y-4">
               <div className="rounded-2xl overflow-hidden border border-amber-500/30 shadow-2xl">
-                <img src="./assets/images/cropped/entrance_arch.jpg" alt="Entrance to Palate Story" className="w-full h-80 object-cover" />
+                <img src="./assets/images/generated/interior_hero_hd.jpg" alt="Interior of Palate Story" className="w-full h-80 object-cover" />
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="rounded-xl overflow-hidden border border-neutral-800">
@@ -158,7 +158,7 @@ export const AboutPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="glass-card rounded-2xl overflow-hidden border border-neutral-800 flex flex-col">
               <div className="h-52 overflow-hidden">
-                <img src="./assets/images/cropped/balcony_patio.jpg" alt="Outdoor Balcony Seating" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                <img src="./assets/images/generated/balcony_hero_hd.jpg" alt="Outdoor Balcony Seating" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
               </div>
               <div className="p-6 flex-grow flex flex-col justify-between">
                 <div>
@@ -175,7 +175,7 @@ export const AboutPage = () => {
 
             <div className="glass-card rounded-2xl overflow-hidden border border-neutral-800 flex flex-col">
               <div className="h-52 overflow-hidden">
-                <img src="./assets/images/cropped/booth_seating.jpg" alt="Cozy Booth Seating" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                <img src="./assets/images/generated/interior_hero_hd.jpg" alt="Cozy Booth Seating" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
               </div>
               <div className="p-6 flex-grow flex flex-col justify-between">
                 <div>
@@ -192,7 +192,7 @@ export const AboutPage = () => {
 
             <div className="glass-card rounded-2xl overflow-hidden border border-neutral-800 flex flex-col">
               <div className="h-52 overflow-hidden">
-                <img src="./assets/images/cropped/maps_dining_room.jpg" alt="Celebration Hall" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                <img src="./assets/images/generated/celebration_party_hd.jpg" alt="Celebration Hall" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
               </div>
               <div className="p-6 flex-grow flex flex-col justify-between">
                 <div>

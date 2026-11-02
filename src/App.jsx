@@ -17,6 +17,8 @@ import { ExperiencesPage } from './pages/ExperiencesPage';
 import { OrderPage } from './pages/OrderPage';
 import { FaqPage } from './pages/FaqPage';
 
+import { ThemeProvider } from './context/ThemeContext';
+
 // Scroll to top upon route change
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -28,34 +30,36 @@ const ScrollToTop = () => {
 
 export const App = () => {
   return (
-    <CartProvider>
-      <Router>
-        <ScrollToTop />
-        <div className="flex flex-col min-h-screen bg-[#0e0f12] text-neutral-100">
-          <AnnouncementBar />
-          <Navbar />
-          
-          <div className="flex-grow">
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/menu" element={<MenuPage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/gallery" element={<GalleryPage />} />
-              <Route path="/reservations" element={<ReservationsPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/events" element={<EventsPage />} />
-              <Route path="/experiences" element={<ExperiencesPage />} />
-              <Route path="/order" element={<OrderPage />} />
-              <Route path="/faq" element={<FaqPage />} />
-              <Route path="*" element={<HomePage />} />
-            </Routes>
-          </div>
+    <ThemeProvider>
+      <CartProvider>
+        <Router>
+          <ScrollToTop />
+          <div className="flex flex-col min-h-screen bg-[var(--bg-primary)] text-[var(--text-main)] transition-colors duration-300">
+            <AnnouncementBar />
+            <Navbar />
+            
+            <div className="flex-grow">
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/menu" element={<MenuPage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/gallery" element={<GalleryPage />} />
+                <Route path="/reservations" element={<ReservationsPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/events" element={<EventsPage />} />
+                <Route path="/experiences" element={<ExperiencesPage />} />
+                <Route path="/order" element={<OrderPage />} />
+                <Route path="/faq" element={<FaqPage />} />
+                <Route path="*" element={<HomePage />} />
+              </Routes>
+            </div>
 
-          <FloatingActions />
-          <Footer />
-        </div>
-      </Router>
-    </CartProvider>
+            <FloatingActions />
+            <Footer />
+          </div>
+        </Router>
+      </CartProvider>
+    </ThemeProvider>
   );
 };
 

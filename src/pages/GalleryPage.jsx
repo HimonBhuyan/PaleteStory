@@ -7,33 +7,57 @@ export const GalleryPage = () => {
 
   const galleryItems = [
     {
-      src: './assets/images/cropped/maps_main_interior.jpg',
+      src: './assets/images/generated/interior_hero_hd.jpg',
       category: 'ambiance',
       title: 'Warm Cane Pendant Lamps & Cozy Booths',
       tag: 'Ambiance',
     },
     {
-      src: './assets/images/cropped/balcony_patio.jpg',
+      src: './assets/images/generated/balcony_hero_hd.jpg',
       category: 'balcony',
       title: 'Outdoor Balcony Seating Overlooking Six Mile Flyover',
       tag: 'Balcony Patio',
     },
     {
-      src: './assets/images/cropped/lassoni_tikka.jpg',
+      src: './assets/images/generated/food_spread_hd.jpg',
       category: 'food',
-      title: 'Char-Grilled Lassoni Chicken Tikka',
-      tag: 'Signature Food',
+      title: 'Tri-Cuisine Feast Spread (Indian, Chinese & Continental)',
+      tag: 'Signature Feasts',
     },
     {
-      src: './assets/images/cropped/passionfruit_mojito.jpg',
+      src: './assets/images/generated/live_music_hd.jpg',
+      category: 'music',
+      title: 'Soulful Live Acoustic Stage & Guitar Sessions',
+      tag: 'Live Music',
+    },
+    {
+      src: './assets/images/generated/celebration_party_hd.jpg',
+      category: 'celebrations',
+      title: 'Custom Balloon Arch & Private Celebration Hall',
+      tag: 'Celebrations',
+    },
+    {
+      src: './assets/images/generated/signature_mocktails_hd.jpg',
       category: 'drinks',
-      title: 'Tropical Passionfruit Mojito with Fresh Mint & Lime',
+      title: 'Handcrafted Mocktail Trio (Bubblegum Bliss & Passionfruit Mojito)',
       tag: 'Signature Drinks',
     },
     {
-      src: './assets/images/cropped/bruschetta.jpg',
+      src: './assets/images/generated/lassoni_tikka_hd.jpg',
       category: 'food',
-      title: 'Tomato & Basil Mozzarella Bruschetta',
+      title: 'Char-Grilled Lassoni Garlic Chicken Tikka',
+      tag: 'Signature Food',
+    },
+    {
+      src: './assets/images/generated/teriyaki_chicken_hd.jpg',
+      category: 'food',
+      title: 'Chicken in Teriyaki Glaze with Steamed Rice',
+      tag: 'Pan-Asian Gourmet',
+    },
+    {
+      src: './assets/images/generated/bruschetta_hd.jpg',
+      category: 'food',
+      title: 'Tomato & Basil Mozzarella Bruschetta with Balsamic',
       tag: 'Continental Antipasti',
     },
     {

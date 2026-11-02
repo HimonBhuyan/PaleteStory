@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { ShoppingBag, Calendar, Menu, X, Home, Utensils, Heart, Camera, GlassWater, Music, MapPin, HelpCircle } from 'lucide-react';
+import { ShoppingBag, Calendar, Menu, X, Home, Utensils, Heart, Camera, GlassWater, Music, MapPin, HelpCircle, Sun, Moon } from 'lucide-react';
 import { useCart } from '../context/CartContext';
+import { useTheme } from '../context/ThemeContext';
 import { CAFE_INFO } from '../data/menuData';
 
 export const Navbar = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const { getItemCount } = useCart();
+  const { theme, toggleTheme, isDark } = useTheme();
   const itemCount = getItemCount();
 
   const navLinks = [
@@ -65,6 +67,16 @@ export const Navbar = () => {
 
             {/* Right Action CTAs */}
             <div className="hidden sm:flex items-center gap-3">
+              {/* Theme Toggle Button */}
+              <button
+                onClick={toggleTheme}
+                className="p-2.5 rounded-full bg-neutral-800/80 hover:bg-neutral-700/80 text-amber-400 border border-amber-500/20 transition-all flex items-center justify-center shadow-md hover:scale-105"
+                title={isDark ? "Switch to Light Cafe Theme" : "Switch to Dark Cafe Theme"}
+                aria-label="Toggle Theme Mode"
+              >
+                {isDark ? <Sun className="w-4 h-4 text-amber-300" /> : <Moon className="w-4 h-4 text-amber-600" />}
+              </button>
+
               <Link to="/reservations" className="btn-gold text-xs py-2.5 px-4 shadow-md">
                 <Calendar className="w-3.5 h-3.5" /> Reserve Table
               </Link>
@@ -83,7 +95,16 @@ export const Navbar = () => {
             </div>
 
             {/* Mobile Menu Hamburger */}
-            <div className="flex items-center gap-3 lg:hidden">
+            <div className="flex items-center gap-2.5 lg:hidden">
+              <button
+                onClick={toggleTheme}
+                className="p-2 rounded-full bg-neutral-800 text-amber-400 border border-amber-500/20"
+                title={isDark ? "Light Mode" : "Dark Mode"}
+                aria-label="Toggle Theme Mode"
+              >
+                {isDark ? <Sun className="w-4 h-4 text-amber-300" /> : <Moon className="w-4 h-4 text-amber-500" />}
+              </button>
+
               <Link to="/order" className="relative p-2 rounded-full bg-neutral-800 text-amber-400 border border-amber-500/20">
                 <ShoppingBag className="w-4 h-4" />
                 {itemCount > 0 && (
@@ -155,6 +176,20 @@ export const Navbar = () => {
         </nav>
 
         <div className="mt-auto pt-6 border-t border-neutral-800 flex flex-col gap-3">
+          {/* Mobile Theme Toggle */}
+          <div className="flex items-center justify-between p-2.5 rounded-xl bg-neutral-900/90 border border-neutral-800">
+            <span className="text-xs font-medium text-neutral-300 flex items-center gap-2">
+              {isDark ? <Moon className="w-4 h-4 text-amber-400" /> : <Sun className="w-4 h-4 text-amber-500" />}
+              <span>{isDark ? 'Dark Theme' : 'Light Theme'}</span>
+            </span>
+            <button
+              onClick={toggleTheme}
+              className="px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-amber-500/20 text-amber-400 border border-amber-500/30 hover:bg-amber-500/30 transition-all"
+            >
+              Switch to {isDark ? 'Light' : 'Dark'}
+            </button>
+          </div>
+
           <Link to="/reservations" onClick={closeDrawer} className="btn-gold text-center py-2.5 text-xs">
             Book a Table
           </Link>

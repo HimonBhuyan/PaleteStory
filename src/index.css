@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-:root {
+:root, [data-theme="dark"] {
   --bg-primary: #0e0f12;
   --bg-surface: #15171c;
   --bg-surface-elevated: #1e2128;
@@ -14,6 +14,22 @@
   --border-gold: rgba(217, 119, 6, 0.25);
   --border-subtle: rgba(255, 255, 255, 0.08);
   --shadow-glow: 0 10px 30px -10px rgba(217, 119, 6, 0.25);
+}
+
+[data-theme="light"], .light {
+  --bg-primary: #faf6f0;
+  --bg-surface: #f3ecdf;
+  --bg-surface-elevated: #ffffff;
+  --bg-surface-card: #ffffff;
+  --text-main: #1c1917;
+  --text-muted: #57534e;
+  --accent-gold: #b45309;
+  --accent-gold-light: #d97706;
+  --accent-amber: #92400e;
+  --accent-sage: #2d503d;
+  --border-gold: rgba(180, 83, 9, 0.35);
+  --border-subtle: rgba(44, 40, 36, 0.12);
+  --shadow-glow: 0 10px 30px -10px rgba(180, 83, 9, 0.2);
 }
 
 * {
@@ -73,6 +89,81 @@ body {
   border-color: var(--border-gold);
   transform: translateY(-4px);
   box-shadow: var(--shadow-glow);
+}
+
+/* Light Theme Mode Overrides */
+[data-theme="light"] .glass-nav {
+  background: rgba(250, 246, 240, 0.92);
+  border-bottom: 1px solid rgba(180, 83, 9, 0.2);
+}
+
+[data-theme="light"] .glass-card {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(44, 40, 36, 0.1);
+  box-shadow: 0 4px 20px rgba(44, 40, 36, 0.06);
+}
+
+[data-theme="light"] .glass-card:hover {
+  border-color: var(--border-gold);
+  box-shadow: 0 12px 30px -8px rgba(180, 83, 9, 0.2);
+}
+
+[data-theme="light"] .gold-gradient-text {
+  background: linear-gradient(135deg, #b45309 0%, #d97706 60%, #92400e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+[data-theme="light"] .hero-ambient-glow {
+  background: radial-gradient(circle, rgba(217, 119, 6, 0.12) 0%, rgba(243, 236, 223, 0) 70%);
+}
+
+[data-theme="light"] .bg-\[\#0e0f12\] {
+  background-color: var(--bg-primary) !important;
+}
+
+[data-theme="light"] .bg-neutral-950 {
+  background-color: var(--bg-surface) !important;
+}
+
+[data-theme="light"] .bg-\[\#181a20\] {
+  background-color: var(--bg-surface-elevated) !important;
+}
+
+[data-theme="light"] .border-neutral-900,
+[data-theme="light"] .border-neutral-800,
+[data-theme="light"] .border-neutral-800\/80 {
+  border-color: rgba(44, 40, 36, 0.12) !important;
+}
+
+[data-theme="light"] .text-neutral-400 {
+  color: #64748b !important;
+}
+
+[data-theme="light"] .text-neutral-300 {
+  color: #475569 !important;
+}
+
+[data-theme="light"] .text-white {
+  color: #1e293b !important;
+}
+
+/* Keep hero content high contrast over dark photo vignette */
+.hero-content .text-white,
+.hero-content .text-neutral-200,
+.hero-content .text-neutral-300,
+.hero-content .text-neutral-400,
+[data-theme="light"] .hero-content .text-white {
+  color: #ffffff !important;
+}
+[data-theme="light"] .hero-content .text-neutral-200 {
+  color: #e2e8f0 !important;
+}
+[data-theme="light"] .hero-content .text-neutral-300 {
+  color: #cbd5e1 !important;
+}
+[data-theme="light"] .hero-content .text-neutral-400 {
+  color: #94a3b8 !important;
 }
 
 .gold-gradient-text {

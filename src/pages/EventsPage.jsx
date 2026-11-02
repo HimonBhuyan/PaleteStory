@@ -57,7 +57,7 @@ export const EventsPage = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <div className="glass-card rounded-2xl overflow-hidden border border-neutral-800">
-              <img src="./assets/images/cropped/varenya_birthday.jpg" alt="Varenya Birthday" className="w-full h-48 object-cover" />
+              <img src="./assets/images/generated/celebration_party_hd.jpg" alt="Varenya Birthday" className="w-full h-48 object-cover" />
               <div className="p-4">
                 <span className="text-[10px] text-amber-400 font-bold uppercase">Kids & Milestone Birthdays</span>
                 <h4 className="font-bold text-white text-sm mt-1">Varenya's 1st Birthday</h4>
@@ -66,7 +66,7 @@ export const EventsPage = () => {
             </div>
 
             <div className="glass-card rounded-2xl overflow-hidden border border-neutral-800">
-              <img src="./assets/images/cropped/maps_main_interior.jpg" alt="Romantic Decor" className="w-full h-48 object-cover" />
+              <img src="./assets/images/generated/interior_hero_hd.jpg" alt="Romantic Decor" className="w-full h-48 object-cover" />
               <div className="p-4">
                 <span className="text-[10px] text-amber-400 font-bold uppercase">Romantic Anniversaries</span>
                 <h4 className="font-bold text-white text-sm mt-1">Candlelight Date Evenings</h4>
@@ -75,7 +75,7 @@ export const EventsPage = () => {
             </div>
 
             <div className="glass-card rounded-2xl overflow-hidden border border-neutral-800">
-              <img src="./assets/images/cropped/birthday_memories.jpg" alt="Family Moments" className="w-full h-48 object-cover" />
+              <img src="./assets/images/generated/food_spread_hd.jpg" alt="Family Moments" className="w-full h-48 object-cover" />
               <div className="p-4">
                 <span className="text-[10px] text-amber-400 font-bold uppercase">Family Banquets</span>
                 <h4 className="font-bold text-white text-sm mt-1">Making Memories Around Our Table</h4>

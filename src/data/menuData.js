@@ -12,7 +12,7 @@ export const PALATE_STORY_MENU = [
     reviewsCount: 88,
     isChefSpecial: true,
     isPopular: true,
-    image: "./assets/images/cropped/lassoni_tikka.jpg",
+    image: "./assets/images/generated/lassoni_tikka_hd.jpg",
     description: "Starring tonight! Tender boneless chicken chunks marinated in crushed garlic, roasted spices, and velvety hung curd, char-grilled in our clay tandoor. Served with mint chutney & pickled onions.",
     spiceLevel: "Medium",
     tags: ["Tandoori", "Best Seller", "Signature"]
@@ -28,7 +28,7 @@ export const PALATE_STORY_MENU = [
     reviewsCount: 64,
     isChefSpecial: true,
     isPopular: true,
-    image: "./assets/images/cropped/bruschetta.jpg",
+    image: "./assets/images/generated/bruschetta_hd.jpg",
     description: "Toasted artisan sourdough bread rubbed with garlic, crowned with ripe vine tomatoes, hand-torn fresh buffalo mozzarella, fragrant basil pesto, and aged balsamic glaze reduction.",
     spiceLevel: "Mild",
     tags: ["Italian", "Vegetarian", "Crowd Favorite"]
@@ -158,7 +158,7 @@ export const PALATE_STORY_MENU = [
     reviewsCount: 78,
     isChefSpecial: true,
     isPopular: true,
-    image: "./assets/images/cropped/teriyaki_chicken.jpg",
+    image: "./assets/images/generated/teriyaki_chicken_hd.jpg",
     description: "Succulent chicken strips simmered in house-made Japanese teriyaki glaze with toasted sesame and scallions, served with fragrant herb butter rice and wok-tossed oriental vegetables.",
     spiceLevel: "Mild-Sweet",
     tags: ["Asian Fusion", "Best Seller", "Teriyaki"]
@@ -174,7 +174,7 @@ export const PALATE_STORY_MENU = [
     reviewsCount: 130,
     isChefSpecial: false,
     isPopular: true,
-    image: "./assets/images/cropped/food_table_spread.jpg",
+    image: "./assets/images/generated/food_spread_hd.jpg",
     description: "Tandoori grilled chicken morsels simmered in velvety, slow-cooked makhani gravy enriched with fresh butter, cashew cream, and dried fenugreek leaves. Served with piping hot butter garlic naan.",
     spiceLevel: "Mild-Medium",
     tags: ["North Indian", "Comfort Food", "Legendary"]
@@ -240,7 +240,7 @@ export const PALATE_STORY_MENU = [
     reviewsCount: 92,
     isChefSpecial: true,
     isPopular: true,
-    image: "./assets/images/cropped/passionfruit_mojito.jpg",
+    image: "./assets/images/generated/signature_mocktails_hd.jpg",
     description: "A tropical burst! Crushed fresh mint leaves, zesty lime wedges, concentrated exotic passionfruit puree, cane syrup, and effervescent sparkling soda over crushed ice.",
     spiceLevel: "Zero",
     tags: ["Signature Cooler", "Tropical", "Refreshing"]
@@ -256,7 +256,7 @@ export const PALATE_STORY_MENU = [
     reviewsCount: 77,
     isChefSpecial: true,
     isPopular: true,
-    image: "./assets/images/cropped/bubblegum_bliss.jpg",
+    image: "./assets/images/generated/signature_mocktails_hd.jpg",
     description: "Nostalgia in a glass! Retro bubblegum essence blended with wild berry reduction, chilled cranberry juice, fresh lime, and aerated sparkling bubbles. A photo-worthy favorite!",
     spiceLevel: "Zero",
     tags: ["Instagram Famous", "Sweet", "Mocktail"]
@@ -272,7 +272,7 @@ export const PALATE_STORY_MENU = [
     reviewsCount: 65,
     isChefSpecial: false,
     isPopular: true,
-    image: "./assets/images/cropped/blue_lagoon.jpg",
+    image: "./assets/images/generated/signature_mocktails_hd.jpg",
     description: "Vibrant electric blue curacao syrup shaken with tart lime juice, house mint cordial, and chilled fizzy lemonade. Garnish with spiral citrus peel.",
     spiceLevel: "Zero",
     tags: ["Cooler", "Citrus", "Vibrant"]

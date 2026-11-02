@@ -17,7 +17,7 @@ const HERO_SCENES = [
     title: 'Warm Bamboo Lights & Romantic Booths',
     subtitle: 'Wicker Aesthetic, Heart Lights & Intimate Seating',
     description: 'Step into Guwahati\'s most aesthetic cafe sanctuary on the 2nd Floor of GS Road. Soft glowing bamboo woven lanterns, custom heart lights, and plush seating create the perfect atmosphere for coffee dates, conversations, and relaxed dining.',
-    image: './assets/images/cropped/maps_main_interior.jpg',
+    image: './assets/images/generated/interior_hero_hd.jpg',
     badge: 'Guwahati\'s #1 Aesthetic Cafe',
     badgeIcon: Sparkles,
     feature: 'Cozy booths • Air conditioned • Free Wi-Fi',
@@ -32,7 +32,7 @@ const HERO_SCENES = [
     title: 'Breezy Outdoor Balcony Seating',
     subtitle: 'Open-Air Guwahati Skyline & Fresh Foliage',
     description: 'Soak in breezy afternoons and vibrant evening skies overlooking Six Mile Flyover. Framed with striped cafe awnings and lush natural greenery, our outdoor balcony is Guwahati\'s favorite spot for fresh air and cold mocktails.',
-    image: './assets/images/cropped/balcony_patio.jpg',
+    image: './assets/images/generated/balcony_hero_hd.jpg',
     badge: 'Open-Air Balcony Dining',
     badgeIcon: Wind,
     feature: 'Panoramic Six Mile view • Sunset golden hour glow',
@@ -47,7 +47,7 @@ const HERO_SCENES = [
     title: 'Smoky Clay Tandoor & Tri-Cuisine Spread',
     subtitle: 'Indian, Chinese & Continental Culinary Artistry',
     description: 'From sizzling Lassoni Chicken Tikka straight from our clay tandoor to Greek Spanakopita, Chermoula Grilled Fish, and Chicken in Teriyaki Sauce — every single dish is handcrafted fresh with authentic artisanal technique.',
-    image: './assets/images/cropped/food_table_spread.jpg',
+    image: './assets/images/generated/food_spread_hd.jpg',
     badge: 'Indian • Chinese • Continental',
     badgeIcon: Flame,
     feature: 'Traditional clay tandoor • 100% fresh artisanal recipes',
@@ -62,7 +62,7 @@ const HERO_SCENES = [
     title: 'Soulful Live Acoustic Music Weekends',
     subtitle: 'Featuring Rahul Gohain & Acclaimed Indie Artists',
     description: 'Unwind every Friday & Saturday evening at 8:00 PM with Guwahati\'s finest live acoustic vocalists and guitarists. Enjoy intimate candlelight dining, signature mocktails, and unplugged melodies.',
-    image: './assets/images/cropped/live_musician.jpg',
+    image: './assets/images/generated/live_music_hd.jpg',
     badge: 'Every Fri & Sat | 8:00 PM',
     badgeIcon: Music,
     feature: 'Acoustic stage • Special weekend platters & drinks',
@@ -77,7 +77,7 @@ const HERO_SCENES = [
     title: 'Custom Celebrations & Birthday Milestones',
     subtitle: 'Themed Decor, Custom Menus & Dedicated Party Hosting',
     description: 'From baby milestones like Varenya\'s 1st birthday to romantic anniversaries, kitty parties, and corporate reunions. We provide customized balloon arch decors, multi-course banquet menus, and seamless hosting.',
-    image: './assets/images/cropped/varenya_birthday.jpg',
+    image: './assets/images/generated/celebration_party_hd.jpg',
     badge: 'Bespoke Celebration Packages',
     badgeIcon: Cake,
     feature: 'Themed balloon styling • Custom party banquet menus',
@@ -91,37 +91,37 @@ const AMBIANCE_STORIES = [
   {
     title: 'Warm Bamboo Lamps & Romantic Booths',
     tag: 'Ambiance',
-    image: './assets/images/cropped/maps_main_interior.jpg',
+    image: './assets/images/generated/interior_hero_hd.jpg',
     desc: 'Handwoven bamboo lamps, fairy lights & custom heart lanterns create Guwahati’s most photogenic dining sanctuary.'
   },
   {
     title: 'Breezy Outdoor Balcony Seating',
     tag: 'Open-Air Patio',
-    image: './assets/images/cropped/balcony_patio.jpg',
+    image: './assets/images/generated/balcony_hero_hd.jpg',
     desc: 'Overlooking Six Mile Flyover with striped awnings, gentle city breezes and ambient evening lights.'
   },
   {
     title: 'Smoky Clay Tandoor & Tri-Cuisine Feasts',
     tag: 'Gourmet Kitchen',
-    image: './assets/images/cropped/food_table_spread.jpg',
+    image: './assets/images/generated/food_spread_hd.jpg',
     desc: 'Lassoni Chicken Tikka, Spanakopita, Chermoula Fish & Teriyaki Chicken served hot from our kitchen.'
   },
   {
     title: 'Weekend Acoustic Live Nights',
     tag: 'Live Sessions',
-    image: './assets/images/cropped/live_musician.jpg',
+    image: './assets/images/generated/live_music_hd.jpg',
     desc: 'Rahul Gohain and celebrated acoustic indie singers performing unplugged Bollywood & retro classics every Fri & Sat.'
   },
   {
     title: 'Custom Milestone & Birthday Celebrations',
     tag: 'Private Events',
-    image: './assets/images/cropped/varenya_birthday.jpg',
+    image: './assets/images/generated/celebration_party_hd.jpg',
     desc: 'Custom balloon arches, personalized party menus, and memorable milestone events like Varenya’s 1st Birthday.'
   },
   {
     title: 'Handcrafted Mocktails & Cool Sips',
     tag: 'Beverages',
-    image: './assets/images/cropped/bubblegum_bliss.jpg',
+    image: './assets/images/generated/signature_mocktails_hd.jpg',
     desc: 'Refreshing Bubblegum Bliss, Passionfruit Mojito, and Blue Lagoon handcrafted by our passionate barista team.'
   }
 ];
