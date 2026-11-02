@@ -74,3 +74,4 @@ export const DishCard = ({ item }) => {
     </div>
   );
 };
+

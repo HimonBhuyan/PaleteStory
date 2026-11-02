@@ -163,3 +163,4 @@ class PalateStoryCart {
 
 // Global cart instance
 const cart = new PalateStoryCart();
+

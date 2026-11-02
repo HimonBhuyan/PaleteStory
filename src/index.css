@@ -55,16 +55,16 @@ body {
 
 /* Glassmorphism Navigation & Surfaces */
 .glass-nav {
-  background: rgba(14, 15, 18, 0.92);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--border-gold);
+  background: rgba(14, 15, 18, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(217, 119, 6, 0.2);
 }
 
 .glass-card {
   background: rgba(24, 26, 32, 0.75);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border-subtle);
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -187,16 +187,59 @@ body {
   animation: pulse-dot 2s infinite;
 }
 
+/* Green Pulse for Open Status */
+@keyframes pulse-dot-green {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+.live-pulse-dot-green {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #10b981;
+  display: inline-block;
+  animation: pulse-dot-green 2s infinite;
+}
+
+/* Continuous Marquee Ticker */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Ken Burns slow cinematic movement */
+@keyframes kenburns {
+  0% { transform: scale(1) translate(0, 0); }
+  50% { transform: scale(1.08) translate(-1%, -1%); }
+  100% { transform: scale(1) translate(0, 0); }
+}
+
+.animate-kenburns {
+  animation: kenburns 18s ease-in-out infinite alternate;
+}
+
 /* Hero background glow */
 .hero-ambient-glow {
   position: absolute;
   top: -150px;
   left: 50%;
   transform: translateX(-50%);
-  width: 700px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(217, 119, 6, 0.18) 0%, rgba(56, 93, 73, 0.08) 45%, rgba(14, 15, 18, 0) 70%);
-  filter: blur(60px);
+  width: 900px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(217, 119, 6, 0.22) 0%, rgba(56, 93, 73, 0.1) 45%, rgba(14, 15, 18, 0) 70%);
+  filter: blur(80px);
   pointer-events: none;
-  z-index: 0;
+  z-index: 1;
 }

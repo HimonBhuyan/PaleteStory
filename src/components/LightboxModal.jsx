@@ -33,3 +33,4 @@ export const LightboxModal = ({ isOpen, image, caption, onClose }) => {
     </div>
   );
 };
+

@@ -359,3 +359,4 @@ function getMenuItems(category = 'all', cuisine = 'all', query = '') {
     return matchesCategory && matchesCuisine && matchesQuery;
   });
 }
+

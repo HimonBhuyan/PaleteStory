@@ -170,3 +170,4 @@ export const FaqPage = () => {
     </div>
   );
 };
+

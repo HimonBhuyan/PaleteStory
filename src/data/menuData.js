@@ -361,3 +361,4 @@ export const CAFE_INFO = {
   timings: "11:30 AM – 10:30 PM (Daily)",
   zomatoUrl: "https://www.zomato.com/guwahati"
 };
+

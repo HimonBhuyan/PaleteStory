@@ -4,8 +4,8 @@ import { CAFE_INFO } from '../data/menuData';
 
 export const AnnouncementBar = () => {
   return (
-    <div className="bg-gradient-to-r from-amber-950 via-neutral-900 to-amber-950 text-amber-200/90 text-xs py-2 px-4 border-b border-amber-500/20">
-      <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+    <div className="bg-gradient-to-r from-amber-950 via-neutral-900 to-amber-950 text-amber-200/90 text-xs py-2 px-4 sm:px-8 border-b border-amber-500/20">
+      <div className="w-full max-w-[1700px] mx-auto flex flex-wrap items-center justify-between gap-2">
         <div className="flex items-center gap-2">
           <span className="live-pulse-dot"></span>
           <span className="font-medium tracking-wide">
@@ -25,3 +25,4 @@ export const AnnouncementBar = () => {
     </div>
   );
 };
+
