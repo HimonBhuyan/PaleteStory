@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events & Private Celebrations | Palate Story Guwahati</title>
+  <meta name="description" content="Host your birthday party, anniversary, or private celebration at Palate Story Guwahati. Custom party menus, balloon decor, private hall bookings, and live acoustic music.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/brand/favicon.svg">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#0e0f12] text-neutral-100 flex flex-col min-h-screen">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-gradient-to-r from-amber-950 via-neutral-900 to-amber-950 text-amber-200/90 text-xs py-2 px-4 border-b border-amber-500/20">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="live-pulse-dot"></span>
+        <span class="font-medium tracking-wide">"Custom party menus crafted for unforgettable evenings" | Book slots: +91 7099018429</span>
+      </div>
+      <div class="flex items-center gap-6 text-[11px] text-neutral-300">
+        <a href="tel:+917099018429" class="hover:text-amber-400 transition-colors flex items-center gap-1.5">
+          <i class="fas fa-phone text-amber-400 text-xs"></i> +91 7099018429
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-40 glass-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-12 h-12 rounded-full overflow-hidden bg-black/60 border border-amber-500/40 p-0.5 flex items-center justify-center shadow-lg group-hover:border-amber-400 transition-all">
+            <img src="assets/images/cropped/logo.png" alt="Palate Story Logo" class="w-full h-full object-cover">
+          </div>
+          <div class="flex flex-col">
+            <span class="font-display font-extrabold text-xl tracking-wider text-white group-hover:text-amber-400 transition-colors">PALATE STORY</span>
+            <span class="text-[9px] tracking-[0.25em] text-amber-400/90 font-medium">INDIAN • CHINESE • CONTINENTAL</span>
+          </div>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-neutral-300">
+          <a href="index.html" class="nav-link hover:text-amber-400 transition-colors">Home</a>
+          <a href="menu.html" class="nav-link hover:text-amber-400 transition-colors">Menu</a>
+          <a href="about.html" class="nav-link hover:text-amber-400 transition-colors">About Us</a>
+          <a href="gallery.html" class="nav-link hover:text-amber-400 transition-colors">Gallery</a>
+          <a href="reservations.html" class="nav-link hover:text-amber-400 transition-colors">Reservations</a>
+          <a href="events.html" class="nav-link hover:text-amber-400 transition-colors">Celebrations</a>
+          <a href="experiences.html" class="nav-link hover:text-amber-400 transition-colors">What's On</a>
+          <a href="order.html" class="nav-link hover:text-amber-400 transition-colors flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Order Online
+          </a>
+          <a href="contact.html" class="nav-link hover:text-amber-400 transition-colors">Contact</a>
+          <a href="faq.html" class="nav-link hover:text-amber-400 transition-colors">FAQ</a>
+        </nav>
+
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="reservations.html" class="btn-gold text-xs py-2.5 px-4 shadow-md">
+            <i class="fas fa-calendar-check text-xs"></i> Reserve Table
+          </a>
+          <a href="order.html" class="relative p-2.5 rounded-full bg-neutral-800 text-amber-400 hover:bg-neutral-700 transition-all border border-amber-500/20" title="View Cart">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cart-badge-count hidden">0</span>
+          </a>
+        </div>
+
+        <div class="flex items-center gap-3 lg:hidden">
+          <a href="order.html" class="relative p-2 rounded-full bg-neutral-800 text-amber-400 border border-amber-500/20">
+            <i class="fas fa-shopping-bag text-sm"></i>
+            <span class="cart-badge-count hidden">0</span>
+          </a>
+          <button id="drawer-open-btn" class="p-2 text-neutral-300 hover:text-white focus:outline-none" aria-label="Open Navigation">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="drawer-backdrop" class="drawer-backdrop"></div>
+  <aside id="mobile-drawer" class="mobile-drawer">
+    <div class="flex items-center justify-between pb-6 border-b border-neutral-800">
+      <div class="flex items-center gap-3">
+        <img src="assets/images/cropped/logo.png" alt="Palate Story" class="w-10 h-10 rounded-full border border-amber-500/40">
+        <div>
+          <h3 class="font-display font-bold text-white tracking-wide">PALATE STORY</h3>
+          <p class="text-[9px] text-amber-400 tracking-wider">GUWAHATI</p>
+        </div>
+      </div>
+      <button id="drawer-close-btn" class="text-neutral-400 hover:text-white p-2">
+        <i class="fas fa-times text-lg"></i>
+      </button>
+    </div>
+    <nav class="flex flex-col gap-4 py-6 text-base font-medium text-neutral-200">
+      <a href="index.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-home w-5 text-amber-500"></i> Home</a>
+      <a href="menu.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-utensils w-5 text-amber-500"></i> Food & Drinks Menu</a>
+      <a href="about.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-heart w-5 text-amber-500"></i> About Our Story</a>
+      <a href="gallery.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-camera-retro w-5 text-amber-500"></i> Cafe Gallery</a>
+      <a href="reservations.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-calendar-alt w-5 text-amber-500"></i> Reserve a Table</a>
+      <a href="events.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-glass-cheers w-5 text-amber-500"></i> Private Celebrations</a>
+      <a href="experiences.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-music w-5 text-amber-500"></i> What's On & Live Music</a>
+      <a href="order.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-shopping-cart w-5 text-amber-500"></i> Online Ordering</a>
+      <a href="contact.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-map-marked-alt w-5 text-amber-500"></i> Contact & Location</a>
+      <a href="faq.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-question-circle w-5 text-amber-500"></i> FAQs</a>
+    </nav>
+  </aside>
+
+  <!-- Hero Header -->
+  <section class="relative py-20 bg-neutral-950 border-b border-neutral-900">
+    <div class="hero-ambient-glow"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <span class="gold-badge text-xs font-bold px-3.5 py-1.5 rounded-full uppercase tracking-widest inline-block mb-3">
+        Milestones & Celebrations
+      </span>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold text-white">
+        Celebrate Life's Greatest Stories
+      </h1>
+      <p class="text-neutral-300 max-w-2xl mx-auto text-base sm:text-lg mt-4 font-light">
+        From birthdays and anniversaries to corporate get-togethers and kitty parties, let Palate Story curate a bespoke culinary celebration complete with festive decor, music & personalized menus.
+      </p>
+    </div>
+  </section>
+
+  <!-- Real Party Highlights Showcase -->
+  <section class="py-16 bg-[#0e0f12]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        
+        <div class="glass-card rounded-2xl overflow-hidden border border-neutral-800">
+          <img src="assets/images/cropped/varenya_birthday.jpg" alt="Varenya Birthday" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <span class="text-[10px] text-amber-400 font-bold uppercase">Kids & Milestone Birthdays</span>
+            <h4 class="font-bold text-white text-sm mt-1">Varenya's 1st Birthday</h4>
+            <p class="text-xs text-neutral-400 mt-1">Custom dessert bars, child-friendly snacks & photo backdrops.</p>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl overflow-hidden border border-neutral-800">
+          <img src="assets/images/cropped/maps_main_interior.jpg" alt="Romantic Decor" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <span class="text-[10px] text-amber-400 font-bold uppercase">Romantic Anniversaries</span>
+            <h4 class="font-bold text-white text-sm mt-1">Candlelight Date Evenings</h4>
+            <p class="text-xs text-neutral-400 mt-1">Hanging heart balloons, rose petals & customized 4-course dinners.</p>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl overflow-hidden border border-neutral-800">
+          <img src="assets/images/cropped/birthday_memories.jpg" alt="Family Moments" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <span class="text-[10px] text-amber-400 font-bold uppercase">Family Banquets</span>
+            <h4 class="font-bold text-white text-sm mt-1">Making Memories Around Our Table</h4>
+            <p class="text-xs text-neutral-400 mt-1">Lavish sharing platters of tandoori kebabs, curries & warm naans.</p>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl overflow-hidden border border-neutral-800">
+          <img src="assets/images/cropped/custom_party_menu.jpg" alt="Custom Party Menu" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <span class="text-[10px] text-amber-400 font-bold uppercase">Corporate & Receptions</span>
+            <h4 class="font-bold text-white text-sm mt-1">Custom Party Menus</h4>
+            <p class="text-xs text-neutral-400 mt-1">Tailored multi-course catering designed for teams and celebrations.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Live Party Budget Estimator & Inquiry Form -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Left: Estimator (7 Cols) -->
+        <div class="lg:col-span-7 glass-card rounded-3xl p-6 sm:p-10 border border-amber-500/30 shadow-2xl">
+          
+          <div class="mb-8 pb-4 border-b border-neutral-800">
+            <span class="gold-badge text-[11px] font-bold px-3 py-1 rounded-full uppercase">Instant Estimator</span>
+            <h2 class="text-2xl sm:text-3xl font-display font-bold text-white mt-2">
+              Plan Your Party Budget
+            </h2>
+            <p class="text-xs text-neutral-400 mt-1">
+              Select your guest count and add-on choices to view instant pricing estimates.
+            </p>
+          </div>
+
+          <form id="event-inquiry-form" class="space-y-6">
+            
+            <!-- Guest Count Slider -->
+            <div>
+              <div class="flex justify-between items-center mb-2">
+                <label class="text-xs font-bold text-neutral-300 uppercase">Number of Guests</label>
+                <span id="guest-count-label" class="text-sm font-bold text-amber-400 font-display">20 Guests</span>
+              </div>
+              <input type="range" id="event-guests" min="10" max="70" step="5" value="20" class="w-full accent-amber-500 cursor-pointer">
+              <div class="flex justify-between text-[10px] text-neutral-500 mt-1">
+                <span>10 Guests (Intimate)</span>
+                <span>35 Guests (Half Hall)</span>
+                <span>70 Guests (Full Hall Buyout)</span>
+              </div>
+            </div>
+
+            <!-- Package Selector -->
+            <div>
+              <label class="block text-xs font-bold text-neutral-300 uppercase mb-2">Select Catering Spread</label>
+              <select id="event-package" class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-3 text-xs sm:text-sm text-white focus:outline-none focus:border-amber-500 cursor-pointer">
+                <option value="650">Classic Spread (₹650/guest) - 2 Starters, 2 Mains, Rice/Breads, 1 Dessert, Mocktail</option>
+                <option value="850" selected>Grand Royal Banquet (₹850/guest) - 4 Starters (Lassoni Tikka, Spanakopita), 3 Mains, Breads, 2 Desserts, Mocktails</option>
+                <option value="1150">Luxury Gourmet Soirée (₹1,150/guest) - Sizzlers, Chermoula Fish, Kebab Platters, Unlimited Mocktails & Freakshakes</option>
+              </select>
+            </div>
+
+            <!-- Optional Add-ons -->
+            <div>
+              <label class="block text-xs font-bold text-neutral-300 uppercase mb-3">Celebration Enhancements (Optional)</label>
+              <div class="space-y-3">
+                <label class="flex items-center gap-3 p-3 rounded-xl bg-neutral-900/60 border border-neutral-800 cursor-pointer hover:border-amber-500/40">
+                  <input type="checkbox" id="addon-decor" class="accent-amber-500 w-4 h-4 rounded">
+                  <div class="text-xs">
+                    <p class="font-bold text-white">Bespoke Balloon Arch & Wooden Wall Decor (+₹3,500)</p>
+                    <p class="text-neutral-400 text-[11px]">Personalized banner, helium balloons & fairy lighting setup.</p>
+                  </div>
+                </label>
+
+                <label class="flex items-center gap-3 p-3 rounded-xl bg-neutral-900/60 border border-neutral-800 cursor-pointer hover:border-amber-500/40">
+                  <input type="checkbox" id="addon-cake" class="accent-amber-500 w-4 h-4 rounded">
+                  <div class="text-xs">
+                    <p class="font-bold text-white">1kg Artisan Celebration Cake (+₹1,200)</p>
+                    <p class="text-neutral-400 text-[11px]">Belgian chocolate truffle, red velvet, or blueberry fresh cream.</p>
+                  </div>
+                </label>
+
+                <label class="flex items-center gap-3 p-3 rounded-xl bg-neutral-900/60 border border-neutral-800 cursor-pointer hover:border-amber-500/40">
+                  <input type="checkbox" id="addon-photo" class="accent-amber-500 w-4 h-4 rounded">
+                  <div class="text-xs">
+                    <p class="font-bold text-white">2-Hour Dedicated Event Photographer (+₹4,000)</p>
+                    <p class="text-neutral-400 text-[11px]">Professional event portraits, candids & high-res edited album.</p>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Price Output Box -->
+            <div class="p-6 rounded-2xl bg-neutral-950 border border-amber-500/40 flex items-center justify-between">
+              <div>
+                <span class="text-[11px] text-neutral-400 uppercase font-semibold">Estimated Package Total:</span>
+                <p id="event-estimate-display" class="text-3xl font-display font-extrabold text-amber-400 mt-1">₹17,000</p>
+                <p class="text-[10px] text-neutral-500">*Exclusive of applicable GST (5%)</p>
+              </div>
+              <a id="event-wa-inquire" href="https://wa.me/917099018429?text=Hi%20Palate%20Story!%20I%20would%20like%20to%20inquire%20about%20a%20private%20celebration%20booking%20for%2020%20guests." target="_blank" class="btn-gold text-xs py-3 px-5 shadow-lg flex items-center gap-2">
+                <i class="fab fa-whatsapp text-emerald-400 text-sm"></i> Inquire via WhatsApp
+              </a>
+            </div>
+
+          </form>
+
+        </div>
+
+        <!-- Right: Inclusions & Direct Call Card (5 Cols) -->
+        <div class="lg:col-span-5 space-y-6">
+          
+          <div class="glass-card rounded-3xl p-6 sm:p-8 border border-neutral-800 space-y-6">
+            <h3 class="text-xl font-serif font-bold text-white">All Party Packages Include:</h3>
+            
+            <ul class="space-y-3.5 text-xs text-neutral-300">
+              <li class="flex items-start gap-3">
+                <div class="w-5 h-5 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 mt-0.5">
+                  <i class="fas fa-check text-[10px]"></i>
+                </div>
+                <span><strong>Private Section Reservation:</strong> Reserved dining booths or full hall section.</span>
+              </li>
+
+              <li class="flex items-start gap-3">
+                <div class="w-5 h-5 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 mt-0.5">
+                  <i class="fas fa-check text-[10px]"></i>
+                </div>
+                <span><strong>Dedicated Event Host:</strong> Seamless serving coordination and guest assistance.</span>
+              </li>
+
+              <li class="flex items-start gap-3">
+                <div class="w-5 h-5 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 mt-0.5">
+                  <i class="fas fa-check text-[10px]"></i>
+                </div>
+                <span><strong>Acoustic Sound System:</strong> Option to play customized party playlists via Bluetooth.</span>
+              </li>
+
+              <li class="flex items-start gap-3">
+                <div class="w-5 h-5 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 mt-0.5">
+                  <i class="fas fa-check text-[10px]"></i>
+                </div>
+                <span><strong>Complimentary Cake Cutting Setup:</strong> Plates, cutlery, candles, and cake table presentation.</span>
+              </li>
+
+              <li class="flex items-start gap-3">
+                <div class="w-5 h-5 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 mt-0.5">
+                  <i class="fas fa-check text-[10px]"></i>
+                </div>
+                <span><strong>Balcony Photo Access:</strong> Unlimited golden hour photoshoot opportunities on the outdoor balcony.</span>
+              </li>
+            </ul>
+
+            <div class="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-center">
+              <p class="text-xs text-amber-300 font-semibold mb-1">
+                <i class="fas fa-phone-alt mr-1"></i> Speak with our Party Planner
+              </p>
+              <p class="text-lg font-bold text-white font-display">+91 7099018429</p>
+              <p class="text-[10px] text-neutral-400 mt-1">Available 11:00 AM – 10:00 PM Daily</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#0a0b0e] text-neutral-400 text-sm border-t border-neutral-900 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-neutral-500">
+        <div class="flex items-center gap-3">
+          <img src="assets/images/cropped/logo.png" alt="Palate Story" class="w-8 h-8 rounded-full border border-amber-500/40">
+          <span class="text-white font-serif font-bold">PALATE STORY GUWAHATI</span>
+        </div>
+        <p>© 2026 Palate Story. 2nd Floor, GS Road Near Six Mile Flyover, Guwahati 781022</p>
+        <div class="flex items-center gap-4">
+          <a href="tel:+917099018429" class="hover:text-amber-400"><i class="fas fa-phone mr-1"></i> +91 7099018429</a>
+          <a href="https://maps.app.goo.gl/pXpBTow5EZE43PFFA" target="_blank" class="hover:text-amber-400">Maps</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="floating-actions">
+    <a href="https://wa.me/917099018429" target="_blank" class="floating-btn floating-btn-whatsapp" title="Chat on WhatsApp">
+      <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+    <a href="order.html" class="floating-btn floating-btn-cart" title="View Order Cart">
+      <i class="fas fa-shopping-bag text-lg"></i>
+      <span class="cart-badge-count hidden">0</span>
+    </a>
+  </div>
+
+  <script src="assets/js/menu-data.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/main.js"></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const guestsInput = document.getElementById('event-guests');
+      const label = document.getElementById('guest-count-label');
+      const waBtn = document.getElementById('event-wa-inquire');
+
+      if (guestsInput && label) {
+        guestsInput.addEventListener('input', () => {
+          label.textContent = `${guestsInput.value} Guests`;
+          if (waBtn) {
+            waBtn.href = `https://wa.me/917099018429?text=Hi%20Palate%20Story!%20I%20would%20like%20to%20inquire%20about%20a%20private%20celebration%20booking%20for%20${guestsInput.value}%20guests.`;
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

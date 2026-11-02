@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserve a Table | Palate Story Guwahati</title>
+  <meta name="description" content="Book your table at Palate Story Guwahati. Reserve your outdoor balcony seat, intimate booth, or romantic dining table near Six Mile Flyover, GS Road.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/brand/favicon.svg">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#0e0f12] text-neutral-100 flex flex-col min-h-screen">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-gradient-to-r from-amber-950 via-neutral-900 to-amber-950 text-amber-200/90 text-xs py-2 px-4 border-b border-amber-500/20">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="live-pulse-dot"></span>
+        <span class="font-medium tracking-wide">Instant Table Confirmation via WhatsApp & SMS | No Reservation Fee</span>
+      </div>
+      <div class="flex items-center gap-6 text-[11px] text-neutral-300">
+        <a href="tel:+917099018429" class="hover:text-amber-400 transition-colors flex items-center gap-1.5">
+          <i class="fas fa-phone text-amber-400 text-xs"></i> +91 7099018429
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-40 glass-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-12 h-12 rounded-full overflow-hidden bg-black/60 border border-amber-500/40 p-0.5 flex items-center justify-center shadow-lg group-hover:border-amber-400 transition-all">
+            <img src="assets/images/cropped/logo.png" alt="Palate Story Logo" class="w-full h-full object-cover">
+          </div>
+          <div class="flex flex-col">
+            <span class="font-display font-extrabold text-xl tracking-wider text-white group-hover:text-amber-400 transition-colors">PALATE STORY</span>
+            <span class="text-[9px] tracking-[0.25em] text-amber-400/90 font-medium">INDIAN • CHINESE • CONTINENTAL</span>
+          </div>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-neutral-300">
+          <a href="index.html" class="nav-link hover:text-amber-400 transition-colors">Home</a>
+          <a href="menu.html" class="nav-link hover:text-amber-400 transition-colors">Menu</a>
+          <a href="about.html" class="nav-link hover:text-amber-400 transition-colors">About Us</a>
+          <a href="gallery.html" class="nav-link hover:text-amber-400 transition-colors">Gallery</a>
+          <a href="reservations.html" class="nav-link hover:text-amber-400 transition-colors">Reservations</a>
+          <a href="events.html" class="nav-link hover:text-amber-400 transition-colors">Celebrations</a>
+          <a href="experiences.html" class="nav-link hover:text-amber-400 transition-colors">What's On</a>
+          <a href="order.html" class="nav-link hover:text-amber-400 transition-colors flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Order Online
+          </a>
+          <a href="contact.html" class="nav-link hover:text-amber-400 transition-colors">Contact</a>
+          <a href="faq.html" class="nav-link hover:text-amber-400 transition-colors">FAQ</a>
+        </nav>
+
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="reservations.html" class="btn-gold text-xs py-2.5 px-4 shadow-md">
+            <i class="fas fa-calendar-check text-xs"></i> Reserve Table
+          </a>
+          <a href="order.html" class="relative p-2.5 rounded-full bg-neutral-800 text-amber-400 hover:bg-neutral-700 transition-all border border-amber-500/20" title="View Cart">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cart-badge-count hidden">0</span>
+          </a>
+        </div>
+
+        <div class="flex items-center gap-3 lg:hidden">
+          <a href="order.html" class="relative p-2 rounded-full bg-neutral-800 text-amber-400 border border-amber-500/20">
+            <i class="fas fa-shopping-bag text-sm"></i>
+            <span class="cart-badge-count hidden">0</span>
+          </a>
+          <button id="drawer-open-btn" class="p-2 text-neutral-300 hover:text-white focus:outline-none" aria-label="Open Navigation">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="drawer-backdrop" class="drawer-backdrop"></div>
+  <aside id="mobile-drawer" class="mobile-drawer">
+    <div class="flex items-center justify-between pb-6 border-b border-neutral-800">
+      <div class="flex items-center gap-3">
+        <img src="assets/images/cropped/logo.png" alt="Palate Story" class="w-10 h-10 rounded-full border border-amber-500/40">
+        <div>
+          <h3 class="font-display font-bold text-white tracking-wide">PALATE STORY</h3>
+          <p class="text-[9px] text-amber-400 tracking-wider">GUWAHATI</p>
+        </div>
+      </div>
+      <button id="drawer-close-btn" class="text-neutral-400 hover:text-white p-2">
+        <i class="fas fa-times text-lg"></i>
+      </button>
+    </div>
+    <nav class="flex flex-col gap-4 py-6 text-base font-medium text-neutral-200">
+      <a href="index.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-home w-5 text-amber-500"></i> Home</a>
+      <a href="menu.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-utensils w-5 text-amber-500"></i> Food & Drinks Menu</a>
+      <a href="about.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-heart w-5 text-amber-500"></i> About Our Story</a>
+      <a href="gallery.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-camera-retro w-5 text-amber-500"></i> Cafe Gallery</a>
+      <a href="reservations.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-calendar-alt w-5 text-amber-500"></i> Reserve a Table</a>
+      <a href="events.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-glass-cheers w-5 text-amber-500"></i> Private Celebrations</a>
+      <a href="experiences.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-music w-5 text-amber-500"></i> What's On & Live Music</a>
+      <a href="order.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-shopping-cart w-5 text-amber-500"></i> Online Ordering</a>
+      <a href="contact.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-map-marked-alt w-5 text-amber-500"></i> Contact & Location</a>
+      <a href="faq.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-question-circle w-5 text-amber-500"></i> FAQs</a>
+    </nav>
+  </aside>
+
+  <!-- Hero Header -->
+  <section class="relative py-16 bg-neutral-950 border-b border-neutral-900">
+    <div class="hero-ambient-glow"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <span class="gold-badge text-xs font-bold px-3.5 py-1.5 rounded-full uppercase tracking-widest inline-block mb-3">
+        Table Reservations
+      </span>
+      <h1 class="text-4xl sm:text-5xl font-display font-extrabold text-white">
+        Reserve Your Table
+      </h1>
+      <p class="text-neutral-400 max-w-xl mx-auto text-sm sm:text-base mt-3">
+        Whether it's an intimate date night, weekend live acoustic performance, or a family celebration, reserve your spot easily with instant confirmation.
+      </p>
+    </div>
+  </section>
+
+  <!-- Reservation Form & Zone Showcase -->
+  <main class="py-14 bg-[#0e0f12] flex-grow">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Booking Form (7 Cols) -->
+        <div class="lg:col-span-7">
+          <div class="glass-card rounded-3xl p-6 sm:p-10 border border-amber-500/30 shadow-2xl relative">
+            
+            <div class="flex items-center justify-between mb-8 pb-4 border-b border-neutral-800">
+              <div>
+                <h2 class="text-2xl font-serif font-bold text-white">Dining Details</h2>
+                <p class="text-xs text-neutral-400 mt-1">Fill out the form below to secure your preferred dining area.</p>
+              </div>
+              <span class="px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/30 text-xs font-semibold">
+                No Pre-payment
+              </span>
+            </div>
+
+            <form id="reservation-form" class="space-y-6">
+              
+              <!-- Guest Count Selector -->
+              <div>
+                <label class="block text-xs font-bold text-neutral-300 uppercase tracking-wider mb-2">
+                  <i class="fas fa-users text-amber-400 mr-1.5"></i> Number of Guests *
+                </label>
+                <div class="grid grid-cols-5 gap-2" id="guest-pills">
+                  <button type="button" class="guest-pill py-2.5 rounded-xl border border-neutral-800 text-xs font-bold text-neutral-300 hover:border-amber-400 focus:outline-none" data-val="1">1</button>
+                  <button type="button" class="guest-pill py-2.5 rounded-xl border border-amber-500 bg-amber-500/20 text-xs font-bold text-amber-300 hover:border-amber-400 focus:outline-none active" data-val="2">2 (Couple)</button>
+                  <button type="button" class="guest-pill py-2.5 rounded-xl border border-neutral-800 text-xs font-bold text-neutral-300 hover:border-amber-400 focus:outline-none" data-val="4">3-4</button>
+                  <button type="button" class="guest-pill py-2.5 rounded-xl border border-neutral-800 text-xs font-bold text-neutral-300 hover:border-amber-400 focus:outline-none" data-val="6">5-8</button>
+                  <button type="button" class="guest-pill py-2.5 rounded-xl border border-neutral-800 text-xs font-bold text-neutral-300 hover:border-amber-400 focus:outline-none" data-val="10+">9+ (Group)</button>
+                </div>
+                <input type="hidden" name="guests" id="selected-guests-input" value="2">
+              </div>
+
+              <!-- Date & Time Row -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-bold text-neutral-300 uppercase tracking-wider mb-2">
+                    <i class="fas fa-calendar-alt text-amber-400 mr-1.5"></i> Date *
+                  </label>
+                  <input type="date" name="date" required class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-500" min="2026-11-02">
+                </div>
+
+                <div>
+                  <label class="block text-xs font-bold text-neutral-300 uppercase tracking-wider mb-2">
+                    <i class="fas fa-clock text-amber-400 mr-1.5"></i> Time Slot *
+                  </label>
+                  <select name="time" required class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-500">
+                    <optgroup label="Lunch Service">
+                      <option value="12:30 PM">12:30 PM</option>
+                      <option value="01:30 PM">01:30 PM</option>
+                      <option value="02:30 PM">02:30 PM</option>
+                    </optgroup>
+                    <optgroup label="Sunset & High Tea">
+                      <option value="04:30 PM">04:30 PM</option>
+                      <option value="05:30 PM">05:30 PM</option>
+                      <option value="06:30 PM">06:30 PM</option>
+                    </optgroup>
+                    <optgroup label="Dinner & Live Music (Peak)">
+                      <option value="07:30 PM" selected>07:30 PM (Dinner)</option>
+                      <option value="08:30 PM">08:30 PM (Live Music Special)</option>
+                      <option value="09:15 PM">09:15 PM (Late Evening)</option>
+                    </optgroup>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Seating Area Preference -->
+              <div>
+                <label class="block text-xs font-bold text-neutral-300 uppercase tracking-wider mb-2">
+                  <i class="fas fa-chair text-amber-400 mr-1.5"></i> Seating Preference *
+                </label>
+                <select name="seating" class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-500">
+                  <option value="Outdoor Balcony Patio">🌿 Outdoor Balcony Patio (Breezy, View of Six Mile)</option>
+                  <option value="Intimate Sage Booth">🛋️ Intimate Sage Green Booth (Cozy, Private)</option>
+                  <option value="Romantic Balloon Heart Setting">❤️ Romantic Couple Table (Special Heart Balloon Decor)</option>
+                  <option value="Main Dining Hall">🎉 Main Dining Hall (Near Logo Wall & Live Music)</option>
+                </select>
+              </div>
+
+              <!-- Contact Information -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-bold text-neutral-300 uppercase tracking-wider mb-2">
+                    <i class="fas fa-user text-amber-400 mr-1.5"></i> Full Name *
+                  </label>
+                  <input type="text" name="name" required placeholder="e.g. Rahul Sharma" class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-500">
+                </div>
+
+                <div>
+                  <label class="block text-xs font-bold text-neutral-300 uppercase tracking-wider mb-2">
+                    <i class="fas fa-phone text-amber-400 mr-1.5"></i> Phone / WhatsApp *
+                  </label>
+                  <input type="tel" name="phone" required placeholder="e.g. 9876543210" class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-500">
+                </div>
+              </div>
+
+              <!-- Special Request Notes -->
+              <div>
+                <label class="block text-xs font-bold text-neutral-300 uppercase tracking-wider mb-2">
+                  <i class="fas fa-comment-dots text-amber-400 mr-1.5"></i> Special Occasion or Requests (Optional)
+                </label>
+                <textarea name="notes" rows="3" placeholder="Birthday, anniversary candle, child chair, or low spice preference..." class="w-full bg-neutral-900 border border-neutral-800 rounded-xl p-4 text-sm text-white focus:outline-none focus:border-amber-500"></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn-gold w-full py-4 text-base shadow-xl">
+                <i class="fas fa-check-circle"></i> Confirm Table Reservation Request
+              </button>
+
+              <p class="text-[11px] text-neutral-400 text-center">
+                <i class="fas fa-shield-alt text-amber-400 mr-1"></i> Tables are held for 15 minutes past reserved time. For groups larger than 12, call <a href="tel:+917099018429" class="text-amber-400 underline font-semibold">7099018429</a>.
+              </p>
+
+            </form>
+
+          </div>
+        </div>
+
+        <!-- Seating Ambience Preview (5 Cols) -->
+        <div class="lg:col-span-5 space-y-6">
+          
+          <div class="glass-card rounded-2xl p-6 border border-neutral-800">
+            <h3 class="text-lg font-serif font-bold text-white mb-4 flex items-center gap-2">
+              <i class="fas fa-map text-amber-400"></i> Our Dining Areas
+            </h3>
+
+            <div class="space-y-4">
+              
+              <!-- Zone 1: Balcony -->
+              <div class="flex items-center gap-4 p-3 rounded-xl bg-neutral-900/60 border border-neutral-800">
+                <img src="assets/images/cropped/balcony_patio.jpg" alt="Balcony" class="w-16 h-16 rounded-lg object-cover shrink-0">
+                <div>
+                  <h4 class="text-xs font-bold text-white">Outdoor Balcony Patio</h4>
+                  <p class="text-[11px] text-neutral-400">Natural breeze, plants & city skyline view. Perfect for evening coffee & starters.</p>
+                </div>
+              </div>
+
+              <!-- Zone 2: Romantic Hearts Setup -->
+              <div class="flex items-center gap-4 p-3 rounded-xl bg-neutral-900/60 border border-neutral-800">
+                <img src="assets/images/cropped/maps_main_interior.jpg" alt="Romantic Decor" class="w-16 h-16 rounded-lg object-cover shrink-0">
+                <div>
+                  <h4 class="text-xs font-bold text-white">Romantic Heart Ambience</h4>
+                  <p class="text-[11px] text-neutral-400">Hanging red hearts & warm cane glow for unforgettable anniversaries & dates.</p>
+                </div>
+              </div>
+
+              <!-- Zone 3: Cozy Booths -->
+              <div class="flex items-center gap-4 p-3 rounded-xl bg-neutral-900/60 border border-neutral-800">
+                <img src="assets/images/cropped/booth_seating.jpg" alt="Cozy Booth" class="w-16 h-16 rounded-lg object-cover shrink-0">
+                <div>
+                  <h4 class="text-xs font-bold text-white">Plush Sage Booths</h4>
+                  <p class="text-[11px] text-neutral-400">Padded banquette seating with directional lamps for private conversations.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Direct Help Card -->
+          <div class="glass-card rounded-2xl p-6 border border-amber-500/30 bg-gradient-to-br from-amber-950/30 to-neutral-900">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold">
+                <i class="fas fa-headset"></i>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-white">Need Urgent Assistance?</h4>
+                <p class="text-[11px] text-neutral-400">Direct Table Concierge Hotline</p>
+              </div>
+            </div>
+            <p class="text-xs text-neutral-300 mb-4 leading-relaxed">
+              Have last-minute table changes or special celebration requests? Speak directly with our floor manager.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3">
+              <a href="tel:+917099018429" class="btn-gold text-xs py-2.5 px-4 text-center justify-center flex-1">
+                <i class="fas fa-phone mr-1.5"></i> Call +91 7099018429
+              </a>
+              <a href="https://wa.me/917099018429?text=Hi%20Palate%20Story%2C%20I%20would%20like%20to%20check%20table%20availability%20for%20today." target="_blank" class="btn-outline-gold text-xs py-2.5 px-4 text-center justify-center flex-1">
+                <i class="fab fa-whatsapp text-emerald-400 mr-1.5"></i> WhatsApp
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Reservation Confirmation Modal -->
+  <div id="reservation-success-modal" class="lightbox-modal">
+    <div class="glass-card rounded-3xl p-8 max-w-lg w-full border border-amber-500/50 shadow-2xl relative text-center space-y-5">
+      
+      <div class="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 text-3xl flex items-center justify-center mx-auto border border-emerald-500/40">
+        <i class="fas fa-check"></i>
+      </div>
+
+      <div>
+        <span class="text-xs text-amber-400 font-bold uppercase tracking-wider">Booking Request Received</span>
+        <h3 class="text-2xl font-serif font-bold text-white mt-1">Table Reserved For <span id="res-name-display" class="text-amber-300"></span></h3>
+        <p class="text-xs text-neutral-400 mt-1">Reference ID: <span id="res-ref-display" class="font-mono text-amber-400 font-bold"></span></p>
+      </div>
+
+      <div class="bg-neutral-900/90 rounded-2xl p-4 border border-neutral-800 text-xs text-neutral-300 space-y-2 text-left">
+        <div class="flex justify-between border-b border-neutral-800/80 pb-2">
+          <span class="text-neutral-400">Date & Slot:</span>
+          <span id="res-date-display" class="font-semibold text-white"></span>
+        </div>
+        <div class="flex justify-between border-b border-neutral-800/80 pb-2">
+          <span class="text-neutral-400">Party Size & Zone:</span>
+          <span id="res-guests-display" class="font-semibold text-white"></span>
+        </div>
+        <div class="flex justify-between pt-1">
+          <span class="text-neutral-400">Location:</span>
+          <span class="font-semibold text-white">2nd Floor, GS Road, Six Mile</span>
+        </div>
+      </div>
+
+      <p class="text-xs text-neutral-400">
+        Click below to send a pre-filled confirmation directly to our restaurant manager on WhatsApp for priority seating!
+      </p>
+
+      <div class="flex flex-col gap-3">
+        <a id="res-wa-btn" href="#" target="_blank" class="btn-gold py-3 text-sm flex items-center justify-center gap-2">
+          <i class="fab fa-whatsapp text-lg"></i> Confirm on WhatsApp
+        </a>
+        <button onclick="document.getElementById('reservation-success-modal').classList.remove('active'); document.getElementById('reservation-form').reset();" class="text-xs text-neutral-400 hover:text-white py-2">
+          Close Window
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-[#0a0b0e] text-neutral-400 text-sm border-t border-neutral-900 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-neutral-500">
+        <div class="flex items-center gap-3">
+          <img src="assets/images/cropped/logo.png" alt="Palate Story" class="w-8 h-8 rounded-full border border-amber-500/40">
+          <span class="text-white font-serif font-bold">PALATE STORY GUWAHATI</span>
+        </div>
+        <p>© 2026 Palate Story. 2nd Floor, GS Road Near Six Mile Flyover, Guwahati 781022</p>
+        <div class="flex items-center gap-4">
+          <a href="tel:+917099018429" class="hover:text-amber-400"><i class="fas fa-phone mr-1"></i> +91 7099018429</a>
+          <a href="https://maps.app.goo.gl/pXpBTow5EZE43PFFA" target="_blank" class="hover:text-amber-400">Maps</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="floating-actions">
+    <a href="https://wa.me/917099018429" target="_blank" class="floating-btn floating-btn-whatsapp" title="Chat on WhatsApp">
+      <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+    <a href="order.html" class="floating-btn floating-btn-cart" title="View Order Cart">
+      <i class="fas fa-shopping-bag text-lg"></i>
+      <span class="cart-badge-count hidden">0</span>
+    </a>
+  </div>
+
+  <script src="assets/js/menu-data.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/main.js"></script>
+  
+  <!-- Guest Pills Selection Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const pills = document.querySelectorAll('.guest-pill');
+      const hiddenInput = document.getElementById('selected-guests-input');
+
+      pills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          pills.forEach(p => {
+            p.classList.remove('border-amber-500', 'bg-amber-500/20', 'text-amber-300');
+            p.classList.add('border-neutral-800', 'text-neutral-300');
+          });
+          pill.classList.add('border-amber-500', 'bg-amber-500/20', 'text-amber-300');
+          pill.classList.remove('border-neutral-800', 'text-neutral-300');
+          hiddenInput.value = pill.getAttribute('data-val');
+        });
+      });
+    });
+  </script>
+</body>
+</html>

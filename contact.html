@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Location | Palate Story Guwahati</title>
+  <meta name="description" content="Find Palate Story Guwahati on GS Road near Six Mile Flyover. Get directions, contact phone numbers, hours of operation, and reservation inquiries.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/brand/favicon.svg">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#0e0f12] text-neutral-100 flex flex-col min-h-screen">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-gradient-to-r from-amber-950 via-neutral-900 to-amber-950 text-amber-200/90 text-xs py-2 px-4 border-b border-amber-500/20">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="live-pulse-dot"></span>
+        <span class="font-medium tracking-wide">📍 Located on 2nd Floor, GS Road, Near Six Mile Flyover, Guwahati 781022</span>
+      </div>
+      <div class="flex items-center gap-6 text-[11px] text-neutral-300">
+        <a href="tel:+917099018429" class="hover:text-amber-400 transition-colors flex items-center gap-1.5">
+          <i class="fas fa-phone text-amber-400 text-xs"></i> +91 7099018429
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-40 glass-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-12 h-12 rounded-full overflow-hidden bg-black/60 border border-amber-500/40 p-0.5 flex items-center justify-center shadow-lg group-hover:border-amber-400 transition-all">
+            <img src="assets/images/cropped/logo.png" alt="Palate Story Logo" class="w-full h-full object-cover">
+          </div>
+          <div class="flex flex-col">
+            <span class="font-display font-extrabold text-xl tracking-wider text-white group-hover:text-amber-400 transition-colors">PALATE STORY</span>
+            <span class="text-[9px] tracking-[0.25em] text-amber-400/90 font-medium">INDIAN • CHINESE • CONTINENTAL</span>
+          </div>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-neutral-300">
+          <a href="index.html" class="nav-link hover:text-amber-400 transition-colors">Home</a>
+          <a href="menu.html" class="nav-link hover:text-amber-400 transition-colors">Menu</a>
+          <a href="about.html" class="nav-link hover:text-amber-400 transition-colors">About Us</a>
+          <a href="gallery.html" class="nav-link hover:text-amber-400 transition-colors">Gallery</a>
+          <a href="reservations.html" class="nav-link hover:text-amber-400 transition-colors">Reservations</a>
+          <a href="events.html" class="nav-link hover:text-amber-400 transition-colors">Celebrations</a>
+          <a href="experiences.html" class="nav-link hover:text-amber-400 transition-colors">What's On</a>
+          <a href="order.html" class="nav-link hover:text-amber-400 transition-colors flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Order Online
+          </a>
+          <a href="contact.html" class="nav-link hover:text-amber-400 transition-colors">Contact</a>
+          <a href="faq.html" class="nav-link hover:text-amber-400 transition-colors">FAQ</a>
+        </nav>
+
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="reservations.html" class="btn-gold text-xs py-2.5 px-4 shadow-md">
+            <i class="fas fa-calendar-check text-xs"></i> Reserve Table
+          </a>
+          <a href="order.html" class="relative p-2.5 rounded-full bg-neutral-800 text-amber-400 hover:bg-neutral-700 transition-all border border-amber-500/20" title="View Cart">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cart-badge-count hidden">0</span>
+          </a>
+        </div>
+
+        <div class="flex items-center gap-3 lg:hidden">
+          <a href="order.html" class="relative p-2 rounded-full bg-neutral-800 text-amber-400 border border-amber-500/20">
+            <i class="fas fa-shopping-bag text-sm"></i>
+            <span class="cart-badge-count hidden">0</span>
+          </a>
+          <button id="drawer-open-btn" class="p-2 text-neutral-300 hover:text-white focus:outline-none" aria-label="Open Navigation">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="drawer-backdrop" class="drawer-backdrop"></div>
+  <aside id="mobile-drawer" class="mobile-drawer">
+    <div class="flex items-center justify-between pb-6 border-b border-neutral-800">
+      <div class="flex items-center gap-3">
+        <img src="assets/images/cropped/logo.png" alt="Palate Story" class="w-10 h-10 rounded-full border border-amber-500/40">
+        <div>
+          <h3 class="font-display font-bold text-white tracking-wide">PALATE STORY</h3>
+          <p class="text-[9px] text-amber-400 tracking-wider">GUWAHATI</p>
+        </div>
+      </div>
+      <button id="drawer-close-btn" class="text-neutral-400 hover:text-white p-2">
+        <i class="fas fa-times text-lg"></i>
+      </button>
+    </div>
+    <nav class="flex flex-col gap-4 py-6 text-base font-medium text-neutral-200">
+      <a href="index.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-home w-5 text-amber-500"></i> Home</a>
+      <a href="menu.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-utensils w-5 text-amber-500"></i> Food & Drinks Menu</a>
+      <a href="about.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-heart w-5 text-amber-500"></i> About Our Story</a>
+      <a href="gallery.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-camera-retro w-5 text-amber-500"></i> Cafe Gallery</a>
+      <a href="reservations.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-calendar-alt w-5 text-amber-500"></i> Reserve a Table</a>
+      <a href="events.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-glass-cheers w-5 text-amber-500"></i> Private Celebrations</a>
+      <a href="experiences.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-music w-5 text-amber-500"></i> What's On & Live Music</a>
+      <a href="order.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-shopping-cart w-5 text-amber-500"></i> Online Ordering</a>
+      <a href="contact.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-map-marked-alt w-5 text-amber-500"></i> Contact & Location</a>
+      <a href="faq.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-question-circle w-5 text-amber-500"></i> FAQs</a>
+    </nav>
+  </aside>
+
+  <!-- Hero Header -->
+  <section class="relative py-16 bg-neutral-950 border-b border-neutral-900">
+    <div class="hero-ambient-glow"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <span class="gold-badge text-xs font-bold px-3.5 py-1.5 rounded-full uppercase tracking-widest inline-block mb-3">
+        Find Us & Say Hello
+      </span>
+      <h1 class="text-4xl sm:text-5xl font-display font-extrabold text-white">
+        Contact & Location
+      </h1>
+      <p class="text-neutral-400 max-w-xl mx-auto text-sm sm:text-base mt-3">
+        Easily accessible on GS Road, Guwahati. Connect with us for bookings, private party inquiries, or just to say hi!
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Cards & Map -->
+  <main class="py-14 bg-[#0e0f12] flex-grow">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Top 3 Quick Contact Info Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        
+        <!-- Card 1: Address -->
+        <div class="glass-card rounded-2xl p-6 border border-neutral-800 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl mb-4">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3 class="text-lg font-serif font-bold text-white mb-2">Our Address</h3>
+            <p class="text-xs text-neutral-300 leading-relaxed">
+              2nd Floor, GS Road, Near Six Mile Flyover,<br>Guwahati, Assam 781022
+            </p>
+            <p class="text-[11px] text-neutral-400 mt-2">
+              <i class="fas fa-landmark text-amber-400 mr-1"></i> Landmark: Right by Six Mile Flyover
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-neutral-800">
+            <a href="https://maps.app.goo.gl/pXpBTow5EZE43PFFA" target="_blank" class="text-xs font-bold text-amber-400 hover:underline flex items-center gap-1.5">
+              Open Google Maps <i class="fas fa-external-link-alt text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2: Phone & WhatsApp -->
+        <div class="glass-card rounded-2xl p-6 border border-neutral-800 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl mb-4">
+              <i class="fas fa-phone-volume"></i>
+            </div>
+            <h3 class="text-lg font-serif font-bold text-white mb-2">Direct Hotline</h3>
+            <p class="text-xs text-neutral-300 leading-relaxed">
+              Table reservations, takeaway orders & party inquiries.
+            </p>
+            <p class="text-base font-bold text-amber-400 mt-2 font-display">
+              +91 7099018429
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-neutral-800 flex items-center gap-4">
+            <a href="tel:+917099018429" class="btn-gold text-xs py-2 px-3.5">
+              <i class="fas fa-phone-alt"></i> Call Now
+            </a>
+            <a href="https://wa.me/917099018429" target="_blank" class="text-xs font-bold text-emerald-400 hover:underline">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3: Hours of Operation -->
+        <div class="glass-card rounded-2xl p-6 border border-neutral-800 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl mb-4">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h3 class="text-lg font-serif font-bold text-white mb-2">Cafe Timings</h3>
+            <div class="space-y-1.5 text-xs text-neutral-300">
+              <div class="flex justify-between">
+                <span>Monday – Sunday:</span>
+                <span class="font-bold text-white">11:30 AM – 10:30 PM</span>
+              </div>
+              <div class="flex justify-between text-neutral-400">
+                <span>Last Kitchen Order:</span>
+                <span>10:00 PM</span>
+              </div>
+              <div class="flex justify-between text-neutral-400">
+                <span>Weekend Live Music:</span>
+                <span>8:00 PM Onwards</span>
+              </div>
+            </div>
+          </div>
+          <div class="pt-4 mt-4 border-t border-neutral-800">
+            <span class="inline-flex items-center gap-1.5 text-xs text-emerald-400 font-medium">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Open Today
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Main Form & Google Maps Section -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Contact Form (6 Cols) -->
+        <div class="lg:col-span-6 glass-card rounded-3xl p-6 sm:p-8 border border-neutral-800">
+          <div class="mb-6">
+            <span class="gold-badge text-[11px] font-bold px-3 py-1 rounded-full uppercase">Drop A Note</span>
+            <h3 class="text-2xl font-serif font-bold text-white mt-2">Send Us A Message</h3>
+            <p class="text-xs text-neutral-400 mt-1">Whether you have feedback, collaboration proposals, or group party questions.</p>
+          </div>
+
+          <form id="contact-form" class="space-y-4" onsubmit="event.preventDefault(); alert('Thank you for reaching out to Palate Story! Our team will get back to you shortly.'); this.reset();">
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-neutral-300 uppercase mb-1">Your Name *</label>
+                <input type="text" required placeholder="John Doe" class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-amber-500">
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-neutral-300 uppercase mb-1">Phone Number *</label>
+                <input type="tel" required placeholder="9876543210" class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-amber-500">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-neutral-300 uppercase mb-1">Email Address</label>
+              <input type="email" placeholder="name@domain.com" class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-amber-500">
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-neutral-300 uppercase mb-1">Subject</label>
+              <select class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-amber-500">
+                <option value="party">Private Party / Celebration Inquiry</option>
+                <option value="reservation">Table Reservation Assistance</option>
+                <option value="feedback">Dine-in Experience Feedback</option>
+                <option value="artist">Musician / Performer Collab</option>
+                <option value="other">General Inquiry</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-neutral-300 uppercase mb-1">Message *</label>
+              <textarea rows="4" required placeholder="How can we help make your experience special?" class="w-full bg-neutral-900 border border-neutral-800 rounded-xl p-4 text-xs text-white focus:outline-none focus:border-amber-500"></textarea>
+            </div>
+
+            <button type="submit" class="btn-gold w-full py-3 text-xs shadow-lg">
+              <i class="fas fa-paper-plane mr-1.5"></i> Submit Message
+            </button>
+          </form>
+        </div>
+
+        <!-- Interactive Google Map Frame & Travel Guide (6 Cols) -->
+        <div class="lg:col-span-6 space-y-6">
+          
+          <div class="glass-card rounded-3xl overflow-hidden border border-amber-500/30 p-2 shadow-2xl">
+            <!-- Simulated High Definition Google Maps View -->
+            <div class="relative w-full h-80 rounded-2xl overflow-hidden bg-neutral-900 border border-neutral-800">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14324.96041042795!2d91.8029!3d26.1362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a59339e80cbb1%3A0x6b633909ea172fa!2sSix%20Mile%2C%20Guwahati%2C%20Assam!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                class="w-full h-full border-0 filter invert-[90%] hue-rotate-180 contrast-[120%]" 
+                allowfullscreen="" 
+                loading="lazy">
+              </iframe>
+              
+              <!-- Overlay Pin Card -->
+              <div class="absolute bottom-4 left-4 right-4 bg-neutral-950/95 backdrop-blur-md p-4 rounded-xl border border-amber-500/40 flex items-center justify-between">
+                <div>
+                  <div class="flex items-center gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+                    <h4 class="text-xs font-bold text-white">PALATE STORY GUWAHATI</h4>
+                  </div>
+                  <p class="text-[10px] text-neutral-300">2nd Floor, GS Road, Six Mile (4.3★ Rating)</p>
+                </div>
+                <a href="https://maps.app.goo.gl/pXpBTow5EZE43PFFA" target="_blank" class="btn-gold text-[11px] py-1.5 px-3">
+                  Directions
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Parking & Transit Guide -->
+          <div class="glass-card rounded-2xl p-6 border border-neutral-800 space-y-4">
+            <h4 class="font-serif font-bold text-white text-base">Travel & Parking Guide</h4>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-neutral-300">
+              <div class="flex items-start gap-2.5">
+                <i class="fas fa-car text-amber-400 mt-0.5"></i>
+                <div>
+                  <p class="font-bold text-white">Parking</p>
+                  <p class="text-neutral-400">Ample roadside & commercial building parking available.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <i class="fas fa-building text-amber-400 mt-0.5"></i>
+                <div>
+                  <p class="font-bold text-white">Building Access</p>
+                  <p class="text-neutral-400">2nd Floor with elevator and wide staircases.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-2 border-t border-neutral-800 text-[11px] text-neutral-400 flex items-center justify-between">
+              <span>Managed on Social by @clickmediaghy</span>
+              <a href="https://instagram.com/palatestoryghy" target="_blank" class="text-amber-400 hover:underline">
+                <i class="fab fa-instagram mr-1"></i> @palatestoryghy
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#0a0b0e] text-neutral-400 text-sm border-t border-neutral-900 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-neutral-500">
+        <div class="flex items-center gap-3">
+          <img src="assets/images/cropped/logo.png" alt="Palate Story" class="w-8 h-8 rounded-full border border-amber-500/40">
+          <span class="text-white font-serif font-bold">PALATE STORY GUWAHATI</span>
+        </div>
+        <p>© 2026 Palate Story. 2nd Floor, GS Road Near Six Mile Flyover, Guwahati 781022</p>
+        <div class="flex items-center gap-4">
+          <a href="tel:+917099018429" class="hover:text-amber-400"><i class="fas fa-phone mr-1"></i> +91 7099018429</a>
+          <a href="https://maps.app.goo.gl/pXpBTow5EZE43PFFA" target="_blank" class="hover:text-amber-400">Maps</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="floating-actions">
+    <a href="https://wa.me/917099018429" target="_blank" class="floating-btn floating-btn-whatsapp" title="Chat on WhatsApp">
+      <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+    <a href="order.html" class="floating-btn floating-btn-cart" title="View Order Cart">
+      <i class="fas fa-shopping-bag text-lg"></i>
+      <span class="cart-badge-count hidden">0</span>
+    </a>
+  </div>
+
+  <script src="assets/js/menu-data.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

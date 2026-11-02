@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What's On & Special Experiences | Palate Story Guwahati</title>
+  <meta name="description" content="Discover what's happening at Palate Story Guwahati. Weekend live acoustic music, Rahul Gohain performances, sunset balcony sessions, and festival culinary specials.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/brand/favicon.svg">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#0e0f12] text-neutral-100 flex flex-col min-h-screen">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-gradient-to-r from-amber-950 via-neutral-900 to-amber-950 text-amber-200/90 text-xs py-2 px-4 border-b border-amber-500/20">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="live-pulse-dot"></span>
+        <span class="font-medium tracking-wide">Live Music Every Weekend! Reserved seating recommended for live music nights.</span>
+      </div>
+      <div class="flex items-center gap-6 text-[11px] text-neutral-300">
+        <a href="tel:+917099018429" class="hover:text-amber-400 transition-colors flex items-center gap-1.5">
+          <i class="fas fa-phone text-amber-400 text-xs"></i> +91 7099018429
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-40 glass-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-12 h-12 rounded-full overflow-hidden bg-black/60 border border-amber-500/40 p-0.5 flex items-center justify-center shadow-lg group-hover:border-amber-400 transition-all">
+            <img src="assets/images/cropped/logo.png" alt="Palate Story Logo" class="w-full h-full object-cover">
+          </div>
+          <div class="flex flex-col">
+            <span class="font-display font-extrabold text-xl tracking-wider text-white group-hover:text-amber-400 transition-colors">PALATE STORY</span>
+            <span class="text-[9px] tracking-[0.25em] text-amber-400/90 font-medium">INDIAN • CHINESE • CONTINENTAL</span>
+          </div>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-neutral-300">
+          <a href="index.html" class="nav-link hover:text-amber-400 transition-colors">Home</a>
+          <a href="menu.html" class="nav-link hover:text-amber-400 transition-colors">Menu</a>
+          <a href="about.html" class="nav-link hover:text-amber-400 transition-colors">About Us</a>
+          <a href="gallery.html" class="nav-link hover:text-amber-400 transition-colors">Gallery</a>
+          <a href="reservations.html" class="nav-link hover:text-amber-400 transition-colors">Reservations</a>
+          <a href="events.html" class="nav-link hover:text-amber-400 transition-colors">Celebrations</a>
+          <a href="experiences.html" class="nav-link hover:text-amber-400 transition-colors">What's On</a>
+          <a href="order.html" class="nav-link hover:text-amber-400 transition-colors flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Order Online
+          </a>
+          <a href="contact.html" class="nav-link hover:text-amber-400 transition-colors">Contact</a>
+          <a href="faq.html" class="nav-link hover:text-amber-400 transition-colors">FAQ</a>
+        </nav>
+
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="reservations.html" class="btn-gold text-xs py-2.5 px-4 shadow-md">
+            <i class="fas fa-calendar-check text-xs"></i> Reserve Table
+          </a>
+          <a href="order.html" class="relative p-2.5 rounded-full bg-neutral-800 text-amber-400 hover:bg-neutral-700 transition-all border border-amber-500/20" title="View Cart">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cart-badge-count hidden">0</span>
+          </a>
+        </div>
+
+        <div class="flex items-center gap-3 lg:hidden">
+          <a href="order.html" class="relative p-2 rounded-full bg-neutral-800 text-amber-400 border border-amber-500/20">
+            <i class="fas fa-shopping-bag text-sm"></i>
+            <span class="cart-badge-count hidden">0</span>
+          </a>
+          <button id="drawer-open-btn" class="p-2 text-neutral-300 hover:text-white focus:outline-none" aria-label="Open Navigation">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="drawer-backdrop" class="drawer-backdrop"></div>
+  <aside id="mobile-drawer" class="mobile-drawer">
+    <div class="flex items-center justify-between pb-6 border-b border-neutral-800">
+      <div class="flex items-center gap-3">
+        <img src="assets/images/cropped/logo.png" alt="Palate Story" class="w-10 h-10 rounded-full border border-amber-500/40">
+        <div>
+          <h3 class="font-display font-bold text-white tracking-wide">PALATE STORY</h3>
+          <p class="text-[9px] text-amber-400 tracking-wider">GUWAHATI</p>
+        </div>
+      </div>
+      <button id="drawer-close-btn" class="text-neutral-400 hover:text-white p-2">
+        <i class="fas fa-times text-lg"></i>
+      </button>
+    </div>
+    <nav class="flex flex-col gap-4 py-6 text-base font-medium text-neutral-200">
+      <a href="index.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-home w-5 text-amber-500"></i> Home</a>
+      <a href="menu.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-utensils w-5 text-amber-500"></i> Food & Drinks Menu</a>
+      <a href="about.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-heart w-5 text-amber-500"></i> About Our Story</a>
+      <a href="gallery.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-camera-retro w-5 text-amber-500"></i> Cafe Gallery</a>
+      <a href="reservations.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-calendar-alt w-5 text-amber-500"></i> Reserve a Table</a>
+      <a href="events.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-glass-cheers w-5 text-amber-500"></i> Private Celebrations</a>
+      <a href="experiences.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-music w-5 text-amber-500"></i> What's On & Live Music</a>
+      <a href="order.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-shopping-cart w-5 text-amber-500"></i> Online Ordering</a>
+      <a href="contact.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-map-marked-alt w-5 text-amber-500"></i> Contact & Location</a>
+      <a href="faq.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-question-circle w-5 text-amber-500"></i> FAQs</a>
+    </nav>
+  </aside>
+
+  <!-- Hero Header -->
+  <section class="relative py-20 bg-neutral-950 border-b border-neutral-900">
+    <div class="hero-ambient-glow"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <span class="gold-badge text-xs font-bold px-3.5 py-1.5 rounded-full uppercase tracking-widest inline-block mb-3">
+        What's Happening At Palate Story
+      </span>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold text-white">
+        Music, Flavors & Experiences
+      </h1>
+      <p class="text-neutral-300 max-w-2xl mx-auto text-base sm:text-lg mt-4 font-light">
+        Every weekend, our cafe comes alive with acoustic singer-songwriters, live musicians, themed tasting platters, and sunset coffee sessions on our outdoor terrace.
+      </p>
+    </div>
+  </section>
+
+  <!-- Featured Headliner Event: Rahul Gohain Live -->
+  <section class="py-16 bg-[#0e0f12]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="glass-card rounded-3xl p-8 sm:p-12 border border-amber-500/40 shadow-2xl relative overflow-hidden">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <div class="lg:col-span-5 rounded-2xl overflow-hidden border border-amber-500/30 shadow-2xl">
+            <img src="assets/images/cropped/live_music_poster.jpg" alt="Rahul Gohain Live Music Event Poster" class="w-full h-80 sm:h-96 object-cover">
+          </div>
+
+          <div class="lg:col-span-7 space-y-5">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-xs font-bold uppercase tracking-wider">
+              <span class="live-pulse-dot" style="width: 8px; height: 8px;"></span> Featured Headline Night
+            </div>
+
+            <h2 class="text-3xl sm:text-4xl font-display font-bold text-white">
+              Live Acoustic Performance: <span class="gold-gradient-text">Rahul Gohain</span>
+            </h2>
+
+            <p class="text-sm sm:text-base text-neutral-300 leading-relaxed font-light">
+              "Get ready for a night full of music!" Join us this weekend as acclaimed Guwahati guitarist and vocalist <strong class="text-amber-400">Rahul Gohain</strong> takes the stage, performing beloved acoustic anthems, indie gems, and soulful Bollywood unplugged melodies.
+            </p>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-2 text-xs">
+              <div class="p-3 rounded-xl bg-neutral-900 border border-neutral-800">
+                <i class="fas fa-calendar-check text-amber-400 mb-1 text-sm"></i>
+                <p class="text-neutral-400">Date:</p>
+                <p class="font-bold text-white text-sm">Every Weekend</p>
+              </div>
+              <div class="p-3 rounded-xl bg-neutral-900 border border-neutral-800">
+                <i class="fas fa-clock text-amber-400 mb-1 text-sm"></i>
+                <p class="text-neutral-400">Timing:</p>
+                <p class="font-bold text-white text-sm">8:00 PM – 10:30 PM</p>
+              </div>
+              <div class="p-3 rounded-xl bg-neutral-900 border border-neutral-800 col-span-2 sm:col-span-1">
+                <i class="fas fa-chair text-amber-400 mb-1 text-sm"></i>
+                <p class="text-neutral-400">Entry:</p>
+                <p class="font-bold text-emerald-400 text-sm">Free with Dine-In</p>
+              </div>
+            </div>
+
+            <div class="pt-4 flex flex-wrap gap-4">
+              <a href="reservations.html" class="btn-gold text-xs py-3 px-6 shadow-xl">
+                <i class="fas fa-ticket-alt"></i> Reserve Stage-Front Table
+              </a>
+              <a href="tel:+917099018429" class="btn-outline-gold text-xs py-3 px-6">
+                <i class="fas fa-phone-alt"></i> Call for Group Bookings
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Weekly Regular Experiences -->
+  <section class="py-16 bg-neutral-950 border-t border-neutral-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="gold-badge text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest inline-block mb-3">
+          Weekly Calendar
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-white">
+          Curated Experiences Throughout The Week
+        </h2>
+        <p class="text-neutral-400 text-sm sm:text-base mt-3">
+          There's always a reason to drop by Palate Story. Check out our recurring happenings.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Experience 1: Unplugged Fridays -->
+        <div class="glass-card rounded-2xl overflow-hidden border border-neutral-800 flex flex-col">
+          <div class="h-48 overflow-hidden relative">
+            <img src="assets/images/cropped/live_musician.jpg" alt="Acoustic Friday" class="w-full h-full object-cover">
+            <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-amber-500 text-black text-[10px] font-bold uppercase">
+              Fridays • 8 PM
+            </div>
+          </div>
+          <div class="p-6 flex-grow flex flex-col justify-between">
+            <div>
+              <h3 class="text-lg font-serif font-bold text-white mb-2">Acoustic Unplugged Fridays</h3>
+              <p class="text-xs text-neutral-400 leading-relaxed mb-4">
+                Wind down your workweek with unplugged guitar sets and soothing vocal performances. Sip our Passionfruit Mojito or artisanal lattes while enjoying intimate acoustic tracks.
+              </p>
+            </div>
+            <a href="reservations.html" class="text-xs font-semibold text-amber-400 hover:text-amber-300 inline-flex items-center gap-1.5">
+              Book Friday Table <i class="fas fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Experience 2: Saturday Night Fever & Platters -->
+        <div class="glass-card rounded-2xl overflow-hidden border border-neutral-800 flex flex-col">
+          <div class="h-48 overflow-hidden relative">
+            <img src="assets/images/cropped/lassoni_tikka.jpg" alt="Kebab Platter Nights" class="w-full h-full object-cover">
+            <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-amber-500 text-black text-[10px] font-bold uppercase">
+              Saturdays • 8 PM
+            </div>
+          </div>
+          <div class="p-6 flex-grow flex flex-col justify-between">
+            <div>
+              <h3 class="text-lg font-serif font-bold text-white mb-2">Grand Kebab & Live Band Saturdays</h3>
+              <p class="text-xs text-neutral-400 leading-relaxed mb-4">
+                The biggest night of the week! Featuring our chef's Grand Tandoori Kebab Platter, sizzlers, live pop & retro music sets, and celebratory energy across both floors.
+              </p>
+            </div>
+            <a href="reservations.html" class="text-xs font-semibold text-amber-400 hover:text-amber-300 inline-flex items-center gap-1.5">
+              Book Saturday Table <i class="fas fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Experience 3: Sunday Sunset Balcony Hour -->
+        <div class="glass-card rounded-2xl overflow-hidden border border-neutral-800 flex flex-col">
+          <div class="h-48 overflow-hidden relative">
+            <img src="assets/images/cropped/balcony_girl.jpg" alt="Sunday Sunset Balcony" class="w-full h-full object-cover">
+            <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-amber-500 text-black text-[10px] font-bold uppercase">
+              Sundays • 5:00 PM
+            </div>
+          </div>
+          <div class="p-6 flex-grow flex flex-col justify-between">
+            <div>
+              <h3 class="text-lg font-serif font-bold text-white mb-2">Sunday Sunset Balcony Sessions</h3>
+              <p class="text-xs text-neutral-400 leading-relaxed mb-4">
+                Golden hour in Guwahati. Watch the sky turn amber from our open balcony patio. Special offers on our signature Bubblegum Bliss, Spiderman Freakshake, and artisan pizzas.
+              </p>
+            </div>
+            <a href="reservations.html?seating=balcony" class="text-xs font-semibold text-amber-400 hover:text-amber-300 inline-flex items-center gap-1.5">
+              Reserve Balcony Seat <i class="fas fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Performer / Musician Callout -->
+  <section class="py-16 bg-[#0e0f12]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="glass-card rounded-3xl p-8 sm:p-12 border border-amber-500/20 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <div class="lg:col-span-8 space-y-4">
+          <span class="gold-badge text-[11px] font-bold px-3 py-1 rounded-full uppercase">For Local Artists</span>
+          <h3 class="text-2xl sm:text-3xl font-serif font-bold text-white">
+            Are You A Musician In Guwahati?
+          </h3>
+          <p class="text-xs sm:text-sm text-neutral-300 leading-relaxed font-light">
+            We are dedicated to championing the vibrant musical soul of Assam. If you are an acoustic guitarist, singer-songwriter, or indie musician looking to perform in front of an appreciative audience, we would love to feature you at Palate Story!
+          </p>
+        </div>
+
+        <div class="lg:col-span-4 flex flex-col gap-3 justify-center">
+          <a href="https://wa.me/917099018429?text=Hi%20Palate%20Story!%20I%20am%20a%20musician%20in%20Guwahati%20and%20interested%20in%20performing%20live%20at%20your%20cafe." target="_blank" class="btn-gold text-xs py-3 text-center justify-center">
+            <i class="fab fa-whatsapp mr-1.5"></i> Submit Demo via WhatsApp
+          </a>
+          <a href="contact.html" class="btn-outline-gold text-xs py-3 text-center justify-center">
+            Send Portfolio Message
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#0a0b0e] text-neutral-400 text-sm border-t border-neutral-900 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-neutral-500">
+        <div class="flex items-center gap-3">
+          <img src="assets/images/cropped/logo.png" alt="Palate Story" class="w-8 h-8 rounded-full border border-amber-500/40">
+          <span class="text-white font-serif font-bold">PALATE STORY GUWAHATI</span>
+        </div>
+        <p>© 2026 Palate Story. 2nd Floor, GS Road Near Six Mile Flyover, Guwahati 781022</p>
+        <div class="flex items-center gap-4">
+          <a href="tel:+917099018429" class="hover:text-amber-400"><i class="fas fa-phone mr-1"></i> +91 7099018429</a>
+          <a href="https://maps.app.goo.gl/pXpBTow5EZE43PFFA" target="_blank" class="hover:text-amber-400">Maps</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="floating-actions">
+    <a href="https://wa.me/917099018429" target="_blank" class="floating-btn floating-btn-whatsapp" title="Chat on WhatsApp">
+      <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+    <a href="order.html" class="floating-btn floating-btn-cart" title="View Order Cart">
+      <i class="fas fa-shopping-bag text-lg"></i>
+      <span class="cart-badge-count hidden">0</span>
+    </a>
+  </div>
+
+  <script src="assets/js/menu-data.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

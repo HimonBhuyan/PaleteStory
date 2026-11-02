@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Ambiance, Dishes & Moments at Palate Story Guwahati</title>
+  <meta name="description" content="Explore the photo gallery of Palate Story Guwahati. Authentic photos of our warm interiors, outdoor balcony seating, artisanal dishes, cocktails, and memorable celebrations.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/brand/favicon.svg">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#0e0f12] text-neutral-100 flex flex-col min-h-screen">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-gradient-to-r from-amber-950 via-neutral-900 to-amber-950 text-amber-200/90 text-xs py-2 px-4 border-b border-amber-500/20">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="live-pulse-dot"></span>
+        <span class="font-medium tracking-wide">Tag us @palatestoryghy in your photos to get featured on our feed!</span>
+      </div>
+      <div class="flex items-center gap-6 text-[11px] text-neutral-300">
+        <a href="tel:+917099018429" class="hover:text-amber-400 transition-colors flex items-center gap-1.5">
+          <i class="fas fa-phone text-amber-400 text-xs"></i> +91 7099018429
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-40 glass-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-12 h-12 rounded-full overflow-hidden bg-black/60 border border-amber-500/40 p-0.5 flex items-center justify-center shadow-lg group-hover:border-amber-400 transition-all">
+            <img src="assets/images/cropped/logo.png" alt="Palate Story Logo" class="w-full h-full object-cover">
+          </div>
+          <div class="flex flex-col">
+            <span class="font-display font-extrabold text-xl tracking-wider text-white group-hover:text-amber-400 transition-colors">PALATE STORY</span>
+            <span class="text-[9px] tracking-[0.25em] text-amber-400/90 font-medium">INDIAN • CHINESE • CONTINENTAL</span>
+          </div>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-neutral-300">
+          <a href="index.html" class="nav-link hover:text-amber-400 transition-colors">Home</a>
+          <a href="menu.html" class="nav-link hover:text-amber-400 transition-colors">Menu</a>
+          <a href="about.html" class="nav-link hover:text-amber-400 transition-colors">About Us</a>
+          <a href="gallery.html" class="nav-link hover:text-amber-400 transition-colors">Gallery</a>
+          <a href="reservations.html" class="nav-link hover:text-amber-400 transition-colors">Reservations</a>
+          <a href="events.html" class="nav-link hover:text-amber-400 transition-colors">Celebrations</a>
+          <a href="experiences.html" class="nav-link hover:text-amber-400 transition-colors">What's On</a>
+          <a href="order.html" class="nav-link hover:text-amber-400 transition-colors flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Order Online
+          </a>
+          <a href="contact.html" class="nav-link hover:text-amber-400 transition-colors">Contact</a>
+          <a href="faq.html" class="nav-link hover:text-amber-400 transition-colors">FAQ</a>
+        </nav>
+
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="reservations.html" class="btn-gold text-xs py-2.5 px-4 shadow-md">
+            <i class="fas fa-calendar-check text-xs"></i> Reserve Table
+          </a>
+          <a href="order.html" class="relative p-2.5 rounded-full bg-neutral-800 text-amber-400 hover:bg-neutral-700 transition-all border border-amber-500/20" title="View Cart">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cart-badge-count hidden">0</span>
+          </a>
+        </div>
+
+        <div class="flex items-center gap-3 lg:hidden">
+          <a href="order.html" class="relative p-2 rounded-full bg-neutral-800 text-amber-400 border border-amber-500/20">
+            <i class="fas fa-shopping-bag text-sm"></i>
+            <span class="cart-badge-count hidden">0</span>
+          </a>
+          <button id="drawer-open-btn" class="p-2 text-neutral-300 hover:text-white focus:outline-none" aria-label="Open Navigation">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="drawer-backdrop" class="drawer-backdrop"></div>
+  <aside id="mobile-drawer" class="mobile-drawer">
+    <div class="flex items-center justify-between pb-6 border-b border-neutral-800">
+      <div class="flex items-center gap-3">
+        <img src="assets/images/cropped/logo.png" alt="Palate Story" class="w-10 h-10 rounded-full border border-amber-500/40">
+        <div>
+          <h3 class="font-display font-bold text-white tracking-wide">PALATE STORY</h3>
+          <p class="text-[9px] text-amber-400 tracking-wider">GUWAHATI</p>
+        </div>
+      </div>
+      <button id="drawer-close-btn" class="text-neutral-400 hover:text-white p-2">
+        <i class="fas fa-times text-lg"></i>
+      </button>
+    </div>
+    <nav class="flex flex-col gap-4 py-6 text-base font-medium text-neutral-200">
+      <a href="index.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-home w-5 text-amber-500"></i> Home</a>
+      <a href="menu.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-utensils w-5 text-amber-500"></i> Food & Drinks Menu</a>
+      <a href="about.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-heart w-5 text-amber-500"></i> About Our Story</a>
+      <a href="gallery.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-camera-retro w-5 text-amber-500"></i> Cafe Gallery</a>
+      <a href="reservations.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-calendar-alt w-5 text-amber-500"></i> Reserve a Table</a>
+      <a href="events.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-glass-cheers w-5 text-amber-500"></i> Private Celebrations</a>
+      <a href="experiences.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-music w-5 text-amber-500"></i> What's On & Live Music</a>
+      <a href="order.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-shopping-cart w-5 text-amber-500"></i> Online Ordering</a>
+      <a href="contact.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-map-marked-alt w-5 text-amber-500"></i> Contact & Location</a>
+      <a href="faq.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-question-circle w-5 text-amber-500"></i> FAQs</a>
+    </nav>
+  </aside>
+
+  <!-- Gallery Header -->
+  <section class="relative py-16 bg-neutral-950 border-b border-neutral-900">
+    <div class="hero-ambient-glow"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <span class="gold-badge text-xs font-bold px-3.5 py-1.5 rounded-full uppercase tracking-widest inline-block mb-3">
+        Visual Journey
+      </span>
+      <h1 class="text-4xl sm:text-5xl font-display font-extrabold text-white">
+        Moments Captured At Palate Story
+      </h1>
+      <p class="text-neutral-400 max-w-2xl mx-auto text-sm sm:text-base mt-3">
+        Immerse yourself in our candlelit interiors, breezy balcony vistas, artfully plated culinary creations, and soulful live weekend sessions.
+      </p>
+
+      <!-- Category Filter Tabs -->
+      <div class="flex flex-wrap items-center justify-center gap-2 mt-8" id="gallery-filters">
+        <button class="gallery-filter-btn px-4 py-2 rounded-full text-xs font-bold transition-all bg-amber-500 text-black shadow-md" data-filter="all">
+          All Moments
+        </button>
+        <button class="gallery-filter-btn px-4 py-2 rounded-full text-xs font-medium text-neutral-300 hover:text-white bg-neutral-900 hover:bg-neutral-800 border border-neutral-800 transition-all" data-filter="ambiance">
+          Ambiance & Interiors
+        </button>
+        <button class="gallery-filter-btn px-4 py-2 rounded-full text-xs font-medium text-neutral-300 hover:text-white bg-neutral-900 hover:bg-neutral-800 border border-neutral-800 transition-all" data-filter="balcony">
+          Outdoor Balcony Patio
+        </button>
+        <button class="gallery-filter-btn px-4 py-2 rounded-full text-xs font-medium text-neutral-300 hover:text-white bg-neutral-900 hover:bg-neutral-800 border border-neutral-800 transition-all" data-filter="food">
+          Signature Food
+        </button>
+        <button class="gallery-filter-btn px-4 py-2 rounded-full text-xs font-medium text-neutral-300 hover:text-white bg-neutral-900 hover:bg-neutral-800 border border-neutral-800 transition-all" data-filter="drinks">
+          Mocktails & Coffee
+        </button>
+        <button class="gallery-filter-btn px-4 py-2 rounded-full text-xs font-medium text-neutral-300 hover:text-white bg-neutral-900 hover:bg-neutral-800 border border-neutral-800 transition-all" data-filter="celebrations">
+          Parties & Celebrations
+        </button>
+        <button class="gallery-filter-btn px-4 py-2 rounded-full text-xs font-medium text-neutral-300 hover:text-white bg-neutral-900 hover:bg-neutral-800 border border-neutral-800 transition-all" data-filter="music">
+          Live Music Sessions
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Photo Gallery Grid -->
+  <main class="py-14 bg-[#0e0f12] flex-grow">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        
+        <!-- Item 1: Interior Google Maps -->
+        <div class="gallery-item glass-card rounded-2xl overflow-hidden border border-neutral-800 group relative cursor-pointer" data-category="ambiance" data-lightbox-src="assets/images/cropped/maps_main_interior.jpg" data-caption="Warm Cane Pendant Lamps & Cozy Booths - Palate Story Interior">
+          <div class="h-64 overflow-hidden relative">
+            <img src="assets/images/cropped/maps_main_interior.jpg" alt="Interior Dining Room" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <div>
+                <span class="text-[10px] text-amber-400 uppercase font-bold tracking-wider">Ambiance</span>
+                <p class="text-xs font-bold text-white">Warm Cane Lamps & Cozy Booths</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2: Balcony Patio -->
+        <div class="gallery-item glass-card rounded-2xl overflow-hidden border border-neutral-800 group relative cursor-pointer" data-category="balcony" data-lightbox-src="assets/images/cropped/balcony_patio.jpg" data-caption="Outdoor Balcony Seating Overlooking Six Mile Flyover">
+          <div class="h-64 overflow-hidden relative">
+            <img src="assets/images/cropped/balcony_patio.jpg" alt="Outdoor Balcony Patio" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <div>
+                <span class="text-[10px] text-amber-400 uppercase font-bold tracking-wider">Balcony Patio</span>
+                <p class="text-xs font-bold text-white">Breezy Twilight Terrace Seating</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3: Lassoni Chicken Tikka -->
+        <div class="gallery-item glass-card rounded-2xl overflow-hidden border border-neutral-800 group relative cursor-pointer" data-category="food" data-lightbox-src="assets/images/cropped/lassoni_tikka.jpg" data-caption="Starring Tonight: Char-Grilled Lassoni Chicken Tikka">
+          <div class="h-64 overflow-hidden relative">
+            <img src="assets/images/cropped/lassoni_tikka.jpg" alt="Lassoni Chicken Tikka" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <div>
+                <span class="text-[10px] text-amber-400 uppercase font-bold tracking-wider">Signature Food</span>
+                <p class="text-xs font-bold text-white">Char-Grilled Lassoni Chicken Tikka</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4: Passionfruit Mojito -->
+        <div class="gallery-item glass-card rounded-2xl overflow-hidden border border-neutral-800 group relative cursor-pointer" data-category="drinks" data-lightbox-src="assets/images/cropped/passionfruit_mojito.jpg" data-caption="Tropical Passionfruit Mojito with Fresh Mint & Lime">
+          <div class="h-64 overflow-hidden relative">
+            <img src="assets/images/cropped/passionfruit_mojito.jpg" alt="Passionfruit Mojito" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <div>
+                <span class="text-[10px] text-amber-400 uppercase font-bold tracking-wider">Signature Drinks</span>
+                <p class="text-xs font-bold text-white">Passionfruit Mojito</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5: Bruschetta -->
+        <div class="gallery-item glass-card rounded-2xl overflow-hidden border border-neutral-800 group relative cursor-pointer" data-category="food" data-lightbox-src="assets/images/cropped/bruschetta.jpg" data-caption="Tomato & Basil Bruschetta with Fresh Buffalo Mozzarella">
+          <div class="h-64 overflow-hidden relative">
+            <img src="assets/images/cropped/bruschetta.jpg" alt="Tomato and Basil Bruschetta" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <div>
+                <span class="text-[10px] text-amber-400 uppercase font-bold tracking-wider">Continental Antipasti</span>
+                <p class="text-xs font-bold text-white">Tomato & Basil Mozzarella Bruschetta</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 6: Birthday Celebration -->
+        <div class="gallery-item glass-card rounded-2xl overflow-hidden border border-neutral-800 group relative cursor-pointer" data-category="celebrations" data-lightbox-src="assets/images/cropped/varenya_birthday.jpg" data-caption="Varenya's 1st Birthday Celebration at Palate Story">
+          <div class="h-64 overflow-hidden relative">
+            <img src="assets/images/cropped/varenya_birthday.jpg" alt="Varenya's Birthday Celebration" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <div>
+                <span class="text-[10px] text-amber-400 uppercase font-bold tracking-wider">Parties & Celebrations</span>
+                <p class="text-xs font-bold text-white">Varenya's Birthday Party Moments</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 7: Live Music Poster (Rahul Gohain) -->
+        <div class="gallery-item glass-card rounded-2xl overflow-hidden border border-neutral-800 group relative cursor-pointer" data-category="music" data-lightbox-src="assets/images/cropped/live_music_poster.jpg" data-caption="Live Music Night Featuring Rahul Gohain">
+          <div class="h-64 overflow-hidden relative">
+            <img src="assets/images/cropped/live_music_poster.jpg" alt="Live Music Night Rahul Gohain" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <div>
+                <span class="text-[10px] text-red-400 uppercase font-bold tracking-wider">Live Performances</span>
+                <p class="text-xs font-bold text-white">Acoustic Set with Rahul Gohain</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 8: Spanakopita Veg -->
+        <div class="gallery-item glass-card rounded-2xl overflow-hidden border border-neutral-800 group relative cursor-pointer" data-category="food" data-lightbox-src="assets/images/cropped/spanakopita.jpg" data-caption="Crispy Greek Spanakopita with Feta & Spinach">
+          <div class="h-64 overflow-hidden relative">
+            <img src="assets/images/cropped/spanakopita.jpg" alt="Spanakopita Veg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <div>
+                <span class="text-[10px] text-amber-400 uppercase font-bold tracking-wider">Mediterranean</span>
+                <p class="text-xs font-bold text-white">Spanakopita Greek Pastry</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 9: Spiderman Freakshake -->
+        <div class="gallery-item glass-card rounded-2xl overflow-hidden border border-neutral-800 group relative cursor-pointer" data-category="drinks" data-lightbox-src="assets/images/cropped/spiderman_shake.jpg" data-caption="The Viral Spiderman Freakshake - Palate Story Special">
+          <div class="h-64 overflow-hidden relative">
+            <img src="assets/images/cropped/spiderman_shake.jpg" alt="The Spiderman Freakshake" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <div>
+                <span class="text-[10px] text-pink-400 uppercase font-bold tracking-wider">Freakshake</span>
+                <p class="text-xs font-bold text-white">The Spiderman Velvet Shake</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 10: Chermoula Fish -->
+        <div class="gallery-item glass-card rounded-2xl overflow-hidden border border-neutral-800 group relative cursor-pointer" data-category="food" data-lightbox-src="assets/images/cropped/chermoula_fish.jpg" data-caption="Chermoula Grilled Sole Fish with Charred Vegetables">
+          <div class="h-64 overflow-hidden relative">
+            <img src="assets/images/cropped/chermoula_fish.jpg" alt="Chermoula Grilled Fish" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <div>
+                <span class="text-[10px] text-amber-400 uppercase font-bold tracking-wider">Gourmet Seafood</span>
+                <p class="text-xs font-bold text-white">Chermoula Grilled Fish</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 11: Live Musician Singing -->
+        <div class="gallery-item glass-card rounded-2xl overflow-hidden border border-neutral-800 group relative cursor-pointer" data-category="music" data-lightbox-src="assets/images/cropped/live_musician.jpg" data-caption="Acoustic Singer on Stage During Weekend Live Session">
+          <div class="h-64 overflow-hidden relative">
+            <img src="assets/images/cropped/live_musician.jpg" alt="Acoustic Musician Performing" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <div>
+                <span class="text-[10px] text-red-400 uppercase font-bold tracking-wider">Live Music</span>
+                <p class="text-xs font-bold text-white">Acoustic Weekend Performance</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 12: Balcony Terrace View with Guest -->
+        <div class="gallery-item glass-card rounded-2xl overflow-hidden border border-neutral-800 group relative cursor-pointer" data-category="balcony" data-lightbox-src="assets/images/cropped/balcony_girl.jpg" data-caption="Charming Balcony Moments Overlooking Six Mile">
+          <div class="h-64 overflow-hidden relative">
+            <img src="assets/images/cropped/balcony_girl.jpg" alt="Outdoor Terrace Lifestyle" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <div>
+                <span class="text-[10px] text-amber-400 uppercase font-bold tracking-wider">Balcony Patio</span>
+                <p class="text-xs font-bold text-white">Guwahati Skylight Vibe</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 13: Chef Artists -->
+        <div class="gallery-item glass-card rounded-2xl overflow-hidden border border-neutral-800 group relative cursor-pointer" data-category="ambiance" data-lightbox-src="assets/images/cropped/chef_artists.jpg" data-caption="The Artists - Palate Story's Culinary Kitchen Brigade">
+          <div class="h-64 overflow-hidden relative">
+            <img src="assets/images/cropped/chef_artists.jpg" alt="Palate Story Culinary Chefs" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <div>
+                <span class="text-[10px] text-amber-400 uppercase font-bold tracking-wider">Our Team</span>
+                <p class="text-xs font-bold text-white">The Kitchen Artists</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 14: Bubblegum Bliss -->
+        <div class="gallery-item glass-card rounded-2xl overflow-hidden border border-neutral-800 group relative cursor-pointer" data-category="drinks" data-lightbox-src="assets/images/cropped/bubblegum_bliss.jpg" data-caption="Bubblegum Bliss Artisanal Layered Mocktail">
+          <div class="h-64 overflow-hidden relative">
+            <img src="assets/images/cropped/bubblegum_bliss.jpg" alt="Bubblegum Bliss Mocktail" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <div>
+                <span class="text-[10px] text-amber-400 uppercase font-bold tracking-wider">Signature Drinks</span>
+                <p class="text-xs font-bold text-white">Bubblegum Bliss Mocktail</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 15: Birthday Party Balloons -->
+        <div class="gallery-item glass-card rounded-2xl overflow-hidden border border-neutral-800 group relative cursor-pointer" data-category="celebrations" data-lightbox-src="assets/images/cropped/interior_birthday.jpg" data-caption="Festive Birthday Party Setup at Palate Story">
+          <div class="h-64 overflow-hidden relative">
+            <img src="assets/images/cropped/interior_birthday.jpg" alt="Birthday Balloon Decor" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <div>
+                <span class="text-[10px] text-amber-400 uppercase font-bold tracking-wider">Party Decor</span>
+                <p class="text-xs font-bold text-white">Balloon Arches & Custom Signage</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 16: Chicken in Teriyaki Sauce -->
+        <div class="gallery-item glass-card rounded-2xl overflow-hidden border border-neutral-800 group relative cursor-pointer" data-category="food" data-lightbox-src="assets/images/cropped/teriyaki_chicken.jpg" data-caption="Chicken in Teriyaki Sauce with Herb Butter Rice">
+          <div class="h-64 overflow-hidden relative">
+            <img src="assets/images/cropped/teriyaki_chicken.jpg" alt="Chicken in Teriyaki Sauce" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <div>
+                <span class="text-[10px] text-amber-400 uppercase font-bold tracking-wider">Asian Fusion</span>
+                <p class="text-xs font-bold text-white">Teriyaki Chicken & Herb Rice</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Lightbox Modal -->
+  <div id="gallery-lightbox" class="lightbox-modal">
+    <div class="relative max-w-4xl max-h-[90vh] flex flex-col items-center">
+      <button id="lightbox-close" class="absolute -top-12 right-0 text-white hover:text-amber-400 text-2xl p-2 focus:outline-none">
+        <i class="fas fa-times"></i>
+      </button>
+      <img id="lightbox-img" src="" alt="Enlarged View" class="max-w-full max-h-[75vh] object-contain rounded-xl border border-neutral-800 shadow-2xl">
+      <p id="lightbox-caption" class="text-amber-300 font-serif text-sm sm:text-base mt-4 text-center"></p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-[#0a0b0e] text-neutral-400 text-sm border-t border-neutral-900 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-neutral-500">
+        <div class="flex items-center gap-3">
+          <img src="assets/images/cropped/logo.png" alt="Palate Story" class="w-8 h-8 rounded-full border border-amber-500/40">
+          <span class="text-white font-serif font-bold">PALATE STORY GUWAHATI</span>
+        </div>
+        <p>© 2026 Palate Story. 2nd Floor, GS Road Near Six Mile Flyover, Guwahati 781022</p>
+        <div class="flex items-center gap-4">
+          <a href="tel:+917099018429" class="hover:text-amber-400"><i class="fas fa-phone mr-1"></i> +91 7099018429</a>
+          <a href="https://maps.app.goo.gl/pXpBTow5EZE43PFFA" target="_blank" class="hover:text-amber-400">Maps</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="floating-actions">
+    <a href="https://wa.me/917099018429" target="_blank" class="floating-btn floating-btn-whatsapp" title="Chat on WhatsApp">
+      <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+    <a href="order.html" class="floating-btn floating-btn-cart" title="View Order Cart">
+      <i class="fas fa-shopping-bag text-lg"></i>
+      <span class="cart-badge-count hidden">0</span>
+    </a>
+  </div>
+
+  <script src="assets/js/menu-data.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Gallery Filter Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterButtons = document.querySelectorAll('.gallery-filter-btn');
+      const items = document.querySelectorAll('.gallery-item');
+
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterButtons.forEach(b => {
+            b.classList.remove('bg-amber-500', 'text-black', 'shadow-md');
+            b.classList.add('bg-neutral-900', 'text-neutral-300');
+          });
+          btn.classList.add('bg-amber-500', 'text-black', 'shadow-md');
+          btn.classList.remove('bg-neutral-900', 'text-neutral-300');
+
+          const filter = btn.getAttribute('data-filter');
+          items.forEach(item => {
+            const cat = item.getAttribute('data-category');
+            if (filter === 'all' || cat === filter) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

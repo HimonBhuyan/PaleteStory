@@ -1,0 +1,10 @@
+# Palate Story - Apache Configuration
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  # If requested path does not start with dist, and dist exists, rewrite root to dist
+  RewriteCond %{REQUEST_URI} !^/palate%20story/dist/ [NC]
+  RewriteCond %{REQUEST_URI} !^/palate\ story/dist/ [NC]
+  RewriteRule ^$ dist/index.html [L]
+  RewriteCond %{DOCUMENT_ROOT}/dist/%{REQUEST_URI} -f
+  RewriteRule ^(.*)$ dist/$1 [L]
+</IfModule>

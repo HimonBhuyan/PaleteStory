@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Ordering & Takeaway | Palate Story Guwahati</title>
+  <meta name="description" content="Order food online from Palate Story Guwahati. Available on Zomato or pre-order direct takeaway & dine-in meals via WhatsApp. Delicious Indian, Chinese & Continental cuisine.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/brand/favicon.svg">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#0e0f12] text-neutral-100 flex flex-col min-h-screen">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-gradient-to-r from-amber-950 via-neutral-900 to-amber-950 text-amber-200/90 text-xs py-2 px-4 border-b border-amber-500/20">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="live-pulse-dot"></span>
+        <span class="font-medium tracking-wide">🛵 We are now on ZOMATO! Order to your doorstep in Guwahati</span>
+      </div>
+      <div class="flex items-center gap-6 text-[11px] text-neutral-300">
+        <a href="tel:+917099018429" class="hover:text-amber-400 transition-colors flex items-center gap-1.5">
+          <i class="fas fa-phone text-amber-400 text-xs"></i> Takeaway Hotline: +91 7099018429
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-40 glass-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-12 h-12 rounded-full overflow-hidden bg-black/60 border border-amber-500/40 p-0.5 flex items-center justify-center shadow-lg group-hover:border-amber-400 transition-all">
+            <img src="assets/images/cropped/logo.png" alt="Palate Story Logo" class="w-full h-full object-cover">
+          </div>
+          <div class="flex flex-col">
+            <span class="font-display font-extrabold text-xl tracking-wider text-white group-hover:text-amber-400 transition-colors">PALATE STORY</span>
+            <span class="text-[9px] tracking-[0.25em] text-amber-400/90 font-medium">INDIAN • CHINESE • CONTINENTAL</span>
+          </div>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-neutral-300">
+          <a href="index.html" class="nav-link hover:text-amber-400 transition-colors">Home</a>
+          <a href="menu.html" class="nav-link hover:text-amber-400 transition-colors">Menu</a>
+          <a href="about.html" class="nav-link hover:text-amber-400 transition-colors">About Us</a>
+          <a href="gallery.html" class="nav-link hover:text-amber-400 transition-colors">Gallery</a>
+          <a href="reservations.html" class="nav-link hover:text-amber-400 transition-colors">Reservations</a>
+          <a href="events.html" class="nav-link hover:text-amber-400 transition-colors">Celebrations</a>
+          <a href="experiences.html" class="nav-link hover:text-amber-400 transition-colors">What's On</a>
+          <a href="order.html" class="nav-link hover:text-amber-400 transition-colors flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Order Online
+          </a>
+          <a href="contact.html" class="nav-link hover:text-amber-400 transition-colors">Contact</a>
+          <a href="faq.html" class="nav-link hover:text-amber-400 transition-colors">FAQ</a>
+        </nav>
+
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="reservations.html" class="btn-gold text-xs py-2.5 px-4 shadow-md">
+            <i class="fas fa-calendar-check text-xs"></i> Reserve Table
+          </a>
+          <a href="order.html" class="relative p-2.5 rounded-full bg-amber-500 text-black shadow-md border border-amber-400" title="View Cart">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cart-badge-count font-bold">0</span>
+          </a>
+        </div>
+
+        <div class="flex items-center gap-3 lg:hidden">
+          <a href="order.html" class="relative p-2 rounded-full bg-amber-500 text-black border border-amber-400">
+            <i class="fas fa-shopping-bag text-sm"></i>
+            <span class="cart-badge-count">0</span>
+          </a>
+          <button id="drawer-open-btn" class="p-2 text-neutral-300 hover:text-white focus:outline-none" aria-label="Open Navigation">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="drawer-backdrop" class="drawer-backdrop"></div>
+  <aside id="mobile-drawer" class="mobile-drawer">
+    <div class="flex items-center justify-between pb-6 border-b border-neutral-800">
+      <div class="flex items-center gap-3">
+        <img src="assets/images/cropped/logo.png" alt="Palate Story" class="w-10 h-10 rounded-full border border-amber-500/40">
+        <div>
+          <h3 class="font-display font-bold text-white tracking-wide">PALATE STORY</h3>
+          <p class="text-[9px] text-amber-400 tracking-wider">GUWAHATI</p>
+        </div>
+      </div>
+      <button id="drawer-close-btn" class="text-neutral-400 hover:text-white p-2">
+        <i class="fas fa-times text-lg"></i>
+      </button>
+    </div>
+    <nav class="flex flex-col gap-4 py-6 text-base font-medium text-neutral-200">
+      <a href="index.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-home w-5 text-amber-500"></i> Home</a>
+      <a href="menu.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-utensils w-5 text-amber-500"></i> Food & Drinks Menu</a>
+      <a href="about.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-heart w-5 text-amber-500"></i> About Our Story</a>
+      <a href="gallery.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-camera-retro w-5 text-amber-500"></i> Cafe Gallery</a>
+      <a href="reservations.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-calendar-alt w-5 text-amber-500"></i> Reserve a Table</a>
+      <a href="events.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-glass-cheers w-5 text-amber-500"></i> Private Celebrations</a>
+      <a href="experiences.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-music w-5 text-amber-500"></i> What's On & Live Music</a>
+      <a href="order.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-shopping-cart w-5 text-amber-500"></i> Online Ordering</a>
+      <a href="contact.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-map-marked-alt w-5 text-amber-500"></i> Contact & Location</a>
+      <a href="faq.html" class="hover:text-amber-400 py-1 flex items-center gap-3"><i class="fas fa-question-circle w-5 text-amber-500"></i> FAQs</a>
+    </nav>
+  </aside>
+
+  <!-- Hero Header -->
+  <section class="relative py-16 bg-neutral-950 border-b border-neutral-900">
+    <div class="hero-ambient-glow"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <span class="gold-badge text-xs font-bold px-3.5 py-1.5 rounded-full uppercase tracking-widest inline-block mb-3">
+        Dine-In Pre-Order & Takeaway
+      </span>
+      <h1 class="text-4xl sm:text-5xl font-display font-extrabold text-white">
+        Online Food Ordering
+      </h1>
+      <p class="text-neutral-400 max-w-xl mx-auto text-sm sm:text-base mt-3">
+        Craving Palate Story at home or want your meal ready when you arrive at our Six Mile cafe? Order seamlessly via Zomato or direct WhatsApp.
+      </p>
+    </div>
+  </section>
+
+  <!-- Official Zomato Delivery Highlight Banner -->
+  <section class="py-10 bg-neutral-900/60 border-b border-neutral-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-red-950/40 via-neutral-900 to-neutral-900 border border-red-500/30 flex flex-col md:flex-row items-center justify-between gap-6">
+        
+        <div class="flex items-center gap-5">
+          <div class="w-20 h-20 rounded-2xl overflow-hidden border border-red-500/40 shrink-0 shadow-lg">
+            <img src="assets/images/cropped/zomato_post.jpg" alt="We Are Now On Zomato" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <span class="px-2.5 py-0.5 rounded-full bg-red-600 text-white text-[10px] font-bold uppercase tracking-wider">
+              Official Partner
+            </span>
+            <h3 class="text-xl sm:text-2xl font-bold text-white mt-1">We Are Now On Zomato!</h3>
+            <p class="text-xs text-neutral-300">Fast doorstep delivery anywhere across Guwahati with live GPS rider tracking.</p>
+          </div>
+        </div>
+
+        <a href="https://www.zomato.com/guwahati" target="_blank" class="btn-zomato py-3 px-8 text-sm shadow-xl shrink-0">
+          <i class="fas fa-external-link-alt text-xs mr-1"></i> Order on Zomato App
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Direct Cafe Cart & Checkout Simulator -->
+  <main class="py-14 bg-[#0e0f12] flex-grow">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        
+        <!-- Cart Items List (7 Cols) -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <div class="glass-card rounded-3xl p-6 sm:p-8 border border-neutral-800">
+            
+            <div class="flex items-center justify-between mb-6 pb-4 border-b border-neutral-800">
+              <div>
+                <h2 class="text-xl font-serif font-bold text-white">Your Order Basket</h2>
+                <p class="text-xs text-neutral-400">Review selected dishes or add recommended specialties below.</p>
+              </div>
+              <button id="clear-cart-btn" class="text-xs text-neutral-400 hover:text-red-400 flex items-center gap-1">
+                <i class="fas fa-trash-alt text-[10px]"></i> Clear Basket
+              </button>
+            </div>
+
+            <!-- Cart Items Container -->
+            <div id="cart-items-container" class="space-y-4">
+              <!-- Dynamically populated -->
+            </div>
+
+            <!-- Empty Cart State -->
+            <div id="cart-empty-message" class="text-center py-12 hidden">
+              <div class="w-16 h-16 rounded-full bg-neutral-900 border border-neutral-800 flex items-center justify-center mx-auto text-neutral-600 text-2xl mb-3">
+                <i class="fas fa-shopping-basket"></i>
+              </div>
+              <h4 class="text-base font-bold text-white mb-1">Your Basket is Empty</h4>
+              <p class="text-xs text-neutral-400 mb-5">Browse our menu and add your favorite dishes to begin your order.</p>
+              <a href="menu.html" class="btn-gold text-xs py-2 px-5">
+                Explore Full Menu
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Quick Add Favorites Section -->
+          <div class="glass-card rounded-3xl p-6 border border-neutral-800">
+            <h3 class="text-sm font-bold text-neutral-300 uppercase tracking-wider mb-4">
+              <i class="fas fa-star text-amber-400 mr-1.5"></i> Frequently Ordered Together
+            </h3>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="quick-add-grid">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Checkout & WhatsApp Dispatch (5 Cols) -->
+        <div class="lg:col-span-5 space-y-6">
+          
+          <div class="glass-card rounded-3xl p-6 sm:p-8 border border-amber-500/30 shadow-2xl">
+            
+            <h3 class="text-lg font-serif font-bold text-white mb-4 pb-2 border-b border-neutral-800">
+              Order Type & Details
+            </h3>
+
+            <!-- Order Mode Selector -->
+            <div class="grid grid-cols-3 gap-2 mb-6" id="order-type-selector">
+              <button type="button" class="order-type-btn py-2.5 px-2 rounded-xl border border-amber-500 bg-amber-500/20 text-xs font-bold text-amber-300 active" data-type="takeaway">
+                🥡 Takeaway
+              </button>
+              <button type="button" class="order-type-btn py-2.5 px-2 rounded-xl border border-neutral-800 text-xs font-bold text-neutral-300 hover:border-amber-400" data-type="dine-in">
+                🍽️ Dine-In Pre-order
+              </button>
+              <button type="button" class="order-type-btn py-2.5 px-2 rounded-xl border border-neutral-800 text-xs font-bold text-neutral-300 hover:border-amber-400" data-type="delivery">
+                🛵 Local Delivery
+              </button>
+            </div>
+
+            <!-- Customer Details Form -->
+            <form id="checkout-form" class="space-y-4">
+              <div>
+                <label class="block text-xs font-bold text-neutral-300 uppercase mb-1">Your Name *</label>
+                <input type="text" id="cust-name" required placeholder="e.g. Priyanshu Sharma" class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-amber-500">
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-neutral-300 uppercase mb-1">WhatsApp Phone Number *</label>
+                <input type="tel" id="cust-phone" required placeholder="e.g. 9876543210" class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-amber-500">
+              </div>
+
+              <div id="address-field" class="hidden">
+                <label class="block text-xs font-bold text-neutral-300 uppercase mb-1">Delivery Address *</label>
+                <input type="text" id="cust-address" placeholder="Apartment / Road name in Guwahati" class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-amber-500">
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-neutral-300 uppercase mb-1">Kitchen Instructions (Optional)</label>
+                <input type="text" id="cust-notes" placeholder="Low spice, extra mint chutney, cutlery requested..." class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-amber-500">
+              </div>
+
+              <!-- Bill Breakdown -->
+              <div class="pt-4 mt-4 border-t border-neutral-800 space-y-2 text-xs text-neutral-300">
+                <div class="flex justify-between">
+                  <span>Item Subtotal:</span>
+                  <span id="bill-subtotal" class="font-bold text-white">₹0</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>GST (5%):</span>
+                  <span id="bill-tax" class="text-neutral-400">₹0</span>
+                </div>
+                <div class="flex justify-between" id="pkg-fee-row">
+                  <span>Eco-Packaging Fee:</span>
+                  <span id="bill-packaging" class="text-neutral-400">₹25</span>
+                </div>
+                <div class="flex justify-between pt-2 border-t border-neutral-800/80 text-sm font-bold text-white">
+                  <span>Total Amount:</span>
+                  <span id="bill-total" class="text-amber-400 font-display text-lg">₹0</span>
+                </div>
+              </div>
+
+              <!-- Dispatch Buttons -->
+              <div class="pt-4 space-y-3">
+                <button type="button" id="whatsapp-order-btn" class="btn-gold w-full py-3.5 text-xs font-bold shadow-xl flex items-center justify-center gap-2">
+                  <i class="fab fa-whatsapp text-emerald-300 text-sm"></i> Send Order to Kitchen via WhatsApp
+                </button>
+                <p class="text-[10px] text-neutral-400 text-center">
+                  Payment accepted via UPI (GPay, PhonePe, Paytm), Cards, or Cash upon pickup.
+                </p>
+              </div>
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#0a0b0e] text-neutral-400 text-sm border-t border-neutral-900 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-neutral-500">
+        <div class="flex items-center gap-3">
+          <img src="assets/images/cropped/logo.png" alt="Palate Story" class="w-8 h-8 rounded-full border border-amber-500/40">
+          <span class="text-white font-serif font-bold">PALATE STORY GUWAHATI</span>
+        </div>
+        <p>© 2026 Palate Story. 2nd Floor, GS Road Near Six Mile Flyover, Guwahati 781022</p>
+        <div class="flex items-center gap-4">
+          <a href="tel:+917099018429" class="hover:text-amber-400"><i class="fas fa-phone mr-1"></i> +91 7099018429</a>
+          <a href="https://maps.app.goo.gl/pXpBTow5EZE43PFFA" target="_blank" class="hover:text-amber-400">Maps</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="floating-actions">
+    <a href="https://wa.me/917099018429" target="_blank" class="floating-btn floating-btn-whatsapp" title="Chat on WhatsApp">
+      <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+  </div>
+
+  <script src="assets/js/menu-data.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/main.js"></script>
+  
+  <!-- Interactive Order Cart Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById('cart-items-container');
+      const emptyMsg = document.getElementById('cart-empty-message');
+      const clearBtn = document.getElementById('clear-cart-btn');
+      const subtotalEl = document.getElementById('bill-subtotal');
+      const taxEl = document.getElementById('bill-tax');
+      const packagingEl = document.getElementById('bill-packaging');
+      const totalEl = document.getElementById('bill-total');
+      const waBtn = document.getElementById('whatsapp-order-btn');
+      const typeBtns = document.querySelectorAll('.order-type-btn');
+      const addressField = document.getElementById('address-field');
+
+      function updateBillUI() {
+        if (cart.items.length === 0) {
+          container.innerHTML = '';
+          emptyMsg.classList.remove('hidden');
+          subtotalEl.textContent = '₹0';
+          taxEl.textContent = '₹0';
+          totalEl.textContent = '₹0';
+          return;
+        }
+
+        emptyMsg.classList.add('hidden');
+        container.innerHTML = cart.items.map(item => `
+          <div class="flex items-center justify-between p-3 rounded-2xl bg-neutral-900/70 border border-neutral-800 gap-3">
+            <div class="flex items-center gap-3">
+              <img src="${item.image}" alt="${item.name}" class="w-14 h-14 rounded-xl object-cover shrink-0">
+              <div>
+                <h4 class="text-xs font-bold text-white leading-snug">${item.name}</h4>
+                <p class="text-amber-400 font-bold text-xs mt-0.5">₹${item.price} each</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <div class="flex items-center border border-neutral-700 rounded-lg bg-neutral-950">
+                <button onclick="cart.updateQty('${item.id}', -1); renderCart();" class="w-7 h-7 flex items-center justify-center text-xs text-neutral-400 hover:text-white">-</button>
+                <span class="px-2 text-xs font-bold text-white">${item.qty}</span>
+                <button onclick="cart.updateQty('${item.id}', 1); renderCart();" class="w-7 h-7 flex items-center justify-center text-xs text-neutral-400 hover:text-white">+</button>
+              </div>
+              <span class="text-xs font-bold text-white min-w-[50px] text-right">₹${item.price * item.qty}</span>
+              <button onclick="cart.removeItem('${item.id}'); renderCart();" class="text-neutral-500 hover:text-red-400 text-xs p-1">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+          </div>
+        `).join('');
+
+        subtotalEl.textContent = `₹${cart.getSubtotal()}`;
+        taxEl.textContent = `₹${cart.getTaxes()}`;
+        packagingEl.textContent = `₹${cart.getPackagingCharge()}`;
+        totalEl.textContent = `₹${cart.getTotal()}`;
+      }
+
+      window.renderCart = updateBillUI;
+
+      // Order type toggling
+      typeBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          typeBtns.forEach(b => {
+            b.classList.remove('border-amber-500', 'bg-amber-500/20', 'text-amber-300');
+            b.classList.add('border-neutral-800', 'text-neutral-300');
+          });
+          btn.classList.add('border-amber-500', 'bg-amber-500/20', 'text-amber-300');
+          btn.classList.remove('border-neutral-800', 'text-neutral-300');
+          
+          cart.orderType = btn.getAttribute('data-type');
+          if (cart.orderType === 'delivery') {
+            addressField.classList.remove('hidden');
+          } else {
+            addressField.classList.add('hidden');
+          }
+          updateBillUI();
+        });
+      });
+
+      // Clear Cart
+      clearBtn.addEventListener('click', () => {
+        if (confirm('Clear all items from your basket?')) {
+          cart.clearCart();
+          updateBillUI();
+        }
+      });
+
+      // WhatsApp Order dispatch
+      waBtn.addEventListener('click', () => {
+        if (cart.items.length === 0) {
+          alert('Your basket is empty. Please add dishes before placing an order.');
+          return;
+        }
+
+        const name = document.getElementById('cust-name').value.trim();
+        const phone = document.getElementById('cust-phone').value.trim();
+        const address = document.getElementById('cust-address').value.trim();
+        const notes = document.getElementById('cust-notes').value.trim();
+
+        if (!name || !phone) {
+          alert('Please enter your Name and WhatsApp phone number.');
+          return;
+        }
+
+        if (cart.orderType === 'delivery' && !address) {
+          alert('Please provide a delivery address.');
+          return;
+        }
+
+        const link = cart.generateWhatsAppOrderLink({ name, phone, address, notes });
+        if (link) {
+          window.open(link, '_blank');
+        }
+      });
+
+      // Quick add recommendations
+      const quickAddGrid = document.getElementById('quick-add-grid');
+      const topPicks = PALATE_STORY_MENU.slice(0, 4);
+      quickAddGrid.innerHTML = topPicks.map(item => `
+        <div class="flex items-center justify-between p-2.5 rounded-xl bg-neutral-900 border border-neutral-800">
+          <div class="flex items-center gap-2.5">
+            <img src="${item.image}" alt="${item.name}" class="w-10 h-10 rounded-lg object-cover">
+            <div>
+              <p class="text-xs font-bold text-white truncate max-w-[140px]">${item.name}</p>
+              <p class="text-[11px] text-amber-400">₹${item.price}</p>
+            </div>
+          </div>
+          <button onclick="cart.addItem({id:'${item.id}', name:'${item.name.replace(/'/g, "\\'")}', price:${item.price}, image:'${item.image}', type:'${item.type}'}); renderCart();" class="px-2.5 py-1 rounded-lg bg-amber-500/20 text-amber-300 border border-amber-500/40 text-xs font-bold hover:bg-amber-500 hover:text-black">
+            + Add
+          </button>
+        </div>
+      `).join('');
+
+      // Listen for global cart updates
+      window.addEventListener('cartUpdated', updateBillUI);
+
+      // Initial render
+      updateBillUI();
+    });
+  </script>
+</body>
+</html>

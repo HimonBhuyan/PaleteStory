@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palate Story | Indian, Chinese & Continental Cafe in Guwahati</title>
+  <meta name="description" content="Welcome to Palate Story, Guwahati's premier cafe & dining destination near Six Mile Flyover. Enjoy authentic Indian, Chinese, Continental cuisines, weekend live music, and scenic outdoor balcony seating.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/brand/favicon.svg">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#0e0f12] text-neutral-100 flex flex-col min-h-screen">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-gradient-to-r from-amber-950 via-neutral-900 to-amber-950 text-amber-200/90 text-xs py-2 px-4 border-b border-amber-500/20">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="live-pulse-dot"></span>
+        <span class="font-medium tracking-wide">Weekend Live Acoustic Sessions every Fri & Sat | 8:00 PM Onwards</span>
+      </div>
+      <div class="flex items-center gap-6 text-[11px] text-neutral-300">
+        <a href="tel:+917099018429" class="hover:text-amber-400 transition-colors flex items-center gap-1.5">
+          <i class="fas fa-phone text-amber-400 text-xs"></i> +91 7099018429
+        </a>
+        <span class="hidden sm:inline text-neutral-600">|</span>
+        <span class="hidden sm:flex items-center gap-1.5">
+          <i class="fas fa-map-marker-alt text-amber-400 text-xs"></i> 2nd Floor, GS Road, Near Six Mile Flyover, Guwahati
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-40 glass-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-12 h-12 rounded-full overflow-hidden bg-black/60 border border-amber-500/40 p-0.5 flex items-center justify-center shadow-lg group-hover:border-amber-400 transition-all">
+            <img src="assets/images/cropped/logo.png" alt="Palate Story Logo" class="w-full h-full object-cover">
+          </div>
+          <div class="flex flex-col">
+            <span class="font-display font-extrabold text-xl tracking-wider text-white group-hover:text-amber-400 transition-colors">PALATE STORY</span>
+            <span class="text-[9px] tracking-[0.25em] text-amber-400/90 font-medium">INDIAN • CHINESE • CONTINENTAL</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-neutral-300">
+          <a href="index.html" class="nav-link hover:text-amber-400 transition-colors">Home</a>
+          <a href="menu.html" class="nav-link hover:text-amber-400 transition-colors">Menu</a>
+          <a href="about.html" class="nav-link hover:text-amber-400 transition-colors">About Us</a>
+          <a href="gallery.html" class="nav-link hover:text-amber-400 transition-colors">Gallery</a>
+          <a href="reservations.html" class="nav-link hover:text-amber-400 transition-colors">Reservations</a>
+          <a href="events.html" class="nav-link hover:text-amber-400 transition-colors">Celebrations</a>
+          <a href="experiences.html" class="nav-link hover:text-amber-400 transition-colors">What's On</a>
+          <a href="order.html" class="nav-link hover:text-amber-400 transition-colors flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Order Online
+          </a>
+          <a href="contact.html" class="nav-link hover:text-amber-400 transition-colors">Contact</a>
+          <a href="faq.html" class="nav-link hover:text-amber-400 transition-colors">FAQ</a>
+        </nav>
+
+        <!-- Right Action Buttons -->
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="reservations.html" class="btn-gold text-xs py-2.5 px-4 shadow-md">
+            <i class="fas fa-calendar-check text-xs"></i> Reserve Table
+          </a>
+          <a href="order.html" class="relative p-2.5 rounded-full bg-neutral-800 text-amber-400 hover:bg-neutral-700 transition-all border border-amber-500/20" title="View Cart">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cart-badge-count hidden">0</span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Trigger -->
+        <div class="flex items-center gap-3 lg:hidden">
+          <a href="order.html" class="relative p-2 rounded-full bg-neutral-800 text-amber-400 border border-amber-500/20">
+            <i class="fas fa-shopping-bag text-sm"></i>
+            <span class="cart-badge-count hidden">0</span>
+          </a>
+          <button id="drawer-open-btn" class="p-2 text-neutral-300 hover:text-white focus:outline-none" aria-label="Open Navigation">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="drawer-backdrop" class="drawer-backdrop"></div>
+  <aside id="mobile-drawer" class="mobile-drawer">
+    <div class="flex items-center justify-between pb-6 border-b border-neutral-800">
+      <div class="flex items-center gap-3">
+        <img src="assets/images/cropped/logo.png" alt="Palate Story" class="w-10 h-10 rounded-full border border-amber-500/40">
+        <div>
+          <h3 class="font-display font-bold text-white tracking-wide">PALATE STORY</h3>
+          <p class="text-[9px] text-amber-400 tracking-wider">GUWAHATI</p>
+        </div>
+      </div>
+      <button id="drawer-close-btn" class="text-neutral-400 hover:text-white p-2">
+        <i class="fas fa-times text-lg"></i>
+      </button>
+    </div>
+
+    <nav class="flex flex-col gap-4 py-6 text-base font-medium text-neutral-200">
+      <a href="index.html" class="hover:text-amber-400 py-1 flex items-center gap-3">
+        <i class="fas fa-home w-5 text-amber-500"></i> Home
+      </a>
+      <a href="menu.html" class="hover:text-amber-400 py-1 flex items-center gap-3">
+        <i class="fas fa-utensils w-5 text-amber-500"></i> Food & Drinks Menu
+      </a>
+      <a href="about.html" class="hover:text-amber-400 py-1 flex items-center gap-3">
+        <i class="fas fa-heart w-5 text-amber-500"></i> About Our Story
+      </a>
+      <a href="gallery.html" class="hover:text-amber-400 py-1 flex items-center gap-3">
+        <i class="fas fa-camera-retro w-5 text-amber-500"></i> Cafe Gallery
+      </a>
+      <a href="reservations.html" class="hover:text-amber-400 py-1 flex items-center gap-3">
+        <i class="fas fa-calendar-alt w-5 text-amber-500"></i> Reserve a Table
+      </a>
+      <a href="events.html" class="hover:text-amber-400 py-1 flex items-center gap-3">
+        <i class="fas fa-glass-cheers w-5 text-amber-500"></i> Private Celebrations
+      </a>
+      <a href="experiences.html" class="hover:text-amber-400 py-1 flex items-center gap-3">
+        <i class="fas fa-music w-5 text-amber-500"></i> What's On & Live Music
+      </a>
+      <a href="order.html" class="hover:text-amber-400 py-1 flex items-center gap-3">
+        <i class="fas fa-shopping-cart w-5 text-amber-500"></i> Online Ordering
+      </a>
+      <a href="contact.html" class="hover:text-amber-400 py-1 flex items-center gap-3">
+        <i class="fas fa-map-marked-alt w-5 text-amber-500"></i> Contact & Location
+      </a>
+      <a href="faq.html" class="hover:text-amber-400 py-1 flex items-center gap-3">
+        <i class="fas fa-question-circle w-5 text-amber-500"></i> FAQs
+      </a>
+    </nav>
+
+    <div class="mt-auto pt-6 border-t border-neutral-800 flex flex-col gap-3">
+      <a href="reservations.html" class="btn-gold text-center py-2.5 text-sm">
+        Book a Table
+      </a>
+      <a href="https://wa.me/917099018429?text=Hi%20Palate%20Story%2C%20I%20would%20like%20to%20inquire%20about%20a%20table%20reservation." target="_blank" class="btn-outline-gold text-center py-2 text-sm flex items-center justify-center gap-2">
+        <i class="fab fa-whatsapp text-emerald-400"></i> WhatsApp Us
+      </a>
+    </div>
+  </aside>
+
+  <!-- Hero Section -->
+  <section class="relative pt-12 pb-20 md:py-24 overflow-hidden border-b border-neutral-900">
+    <div class="hero-ambient-glow"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Hero Content (7 Cols) -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-semibold tracking-wider uppercase">
+            <i class="fas fa-award text-amber-400"></i> Guwahati's Favorite Aesthetic Cafe & Lounge
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold tracking-tight text-white leading-tight">
+            Igniting Your Taste Buds With Every Dish, 
+            <span class="gold-gradient-text block mt-1">One Bite At A Time.</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-neutral-300 max-w-2xl font-light">
+            Perched gracefully on the 2nd Floor, GS Road near Six Mile Flyover, <strong class="text-white font-medium">Palate Story</strong> brings you a harmonious culinary journey across <span class="text-amber-400 font-medium">Indian, Chinese & Continental</span> cuisines, enveloped in warm wicker-lit interiors, breezy outdoor balcony seating, and soulful live acoustic weekends.
+          </p>
+
+          <!-- Badges & Ratings -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+            <div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-neutral-900/90 border border-neutral-800 text-xs">
+              <span class="flex text-amber-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </span>
+              <span class="font-bold text-white">4.3 / 5</span>
+              <span class="text-neutral-400">(142+ Google Reviews)</span>
+            </div>
+
+            <div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-neutral-900/90 border border-neutral-800 text-xs text-neutral-300">
+              <i class="fas fa-wallet text-amber-400"></i>
+              <span>₹400–600 for two</span>
+            </div>
+
+            <div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-neutral-900/90 border border-neutral-800 text-xs text-neutral-300">
+              <i class="fas fa-clock text-emerald-400"></i>
+              <span class="text-emerald-400 font-medium">Open Daily</span>
+              <span>11:30 AM – 10:30 PM</span>
+            </div>
+          </div>
+
+          <!-- Hero CTAs -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
+            <a href="reservations.html" class="btn-gold text-sm py-3 px-6 shadow-xl">
+              <i class="fas fa-chair"></i> Reserve a Table
+            </a>
+            <a href="menu.html" class="btn-outline-gold text-sm py-3 px-6">
+              <i class="fas fa-book-open"></i> Explore Full Menu
+            </a>
+            <a href="order.html" class="btn-zomato text-sm py-3 px-6 shadow-md">
+              <i class="fas fa-motorcycle"></i> Order Online
+            </a>
+          </div>
+
+          <!-- Highlight Points -->
+          <div class="pt-6 grid grid-cols-3 gap-3 border-t border-neutral-800/80 text-left">
+            <div>
+              <p class="font-display font-bold text-amber-400 text-lg sm:text-xl">380+</p>
+              <p class="text-xs text-neutral-400">Stories Shared</p>
+            </div>
+            <div>
+              <p class="font-display font-bold text-amber-400 text-lg sm:text-xl">3 Cuisines</p>
+              <p class="text-xs text-neutral-400">Indian, Chinese, Continental</p>
+            </div>
+            <div>
+              <p class="font-display font-bold text-amber-400 text-lg sm:text-xl">100%</p>
+              <p class="text-xs text-neutral-400">Handcrafted Fresh</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Hero Visual Showcase (5 Cols) -->
+        <div class="lg:col-span-5 relative">
+          
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            
+            <!-- Main Ambient Image (Actual Google Maps Interior) -->
+            <div class="relative rounded-2xl overflow-hidden border-2 border-amber-500/30 shadow-2xl bg-neutral-900 group">
+              <img src="assets/images/cropped/maps_main_interior.jpg" alt="Palate Story Warm Ambient Interior" class="w-full h-80 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+              
+              <div class="absolute bottom-4 left-4 right-4">
+                <span class="inline-block px-2.5 py-0.5 rounded-full bg-amber-500/90 text-black text-[10px] font-extrabold tracking-wider uppercase mb-1">
+                  Six Mile, Guwahati
+                </span>
+                <h4 class="text-lg font-serif font-bold text-white">Warm Bamboo Lights & Romantic Booths</h4>
+                <p class="text-xs text-neutral-300">Intimate dining, private celebrations & relaxed coffee conversations</p>
+              </div>
+            </div>
+
+            <!-- Floating Card 1: Balcony View -->
+            <div class="absolute -top-6 -left-6 sm:-left-8 w-44 rounded-xl overflow-hidden glass-card p-1.5 shadow-2xl border border-amber-500/40 hidden sm:block animate-bounce" style="animation-duration: 6s;">
+              <img src="assets/images/cropped/balcony_patio.jpg" alt="Outdoor Balcony Seating" class="w-full h-24 object-cover rounded-lg">
+              <div class="p-1.5 text-center">
+                <p class="text-[11px] font-bold text-amber-300">Outdoor Balcony</p>
+                <p class="text-[9px] text-neutral-400">Breezy city-view seating</p>
+              </div>
+            </div>
+
+            <!-- Floating Card 2: Live Music Badge -->
+            <div class="absolute -bottom-6 -right-4 sm:-right-6 rounded-xl glass-card p-3 shadow-2xl border border-amber-500/40 max-w-[210px]">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg overflow-hidden border border-amber-400 shrink-0">
+                  <img src="assets/images/cropped/live_music_poster.jpg" alt="Live Music" class="w-full h-full object-cover">
+                </div>
+                <div>
+                  <div class="flex items-center gap-1">
+                    <span class="live-pulse-dot" style="width: 6px; height: 6px;"></span>
+                    <span class="text-[10px] font-bold text-red-400 uppercase">Live Music</span>
+                  </div>
+                  <p class="text-xs font-semibold text-white">Acoustic Weekends</p>
+                  <p class="text-[10px] text-neutral-400">Rahul Gohain & guests</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Highlight Cards (Outdoor, Live Music, Tri-Cuisine, Parties) -->
+  <section class="py-12 bg-neutral-950 border-b border-neutral-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Feature 1: Outdoor Balcony -->
+        <div class="glass-card rounded-2xl p-6 border border-neutral-800/80 hover:border-amber-500/40 group">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 group-hover:bg-amber-500 group-hover:text-black transition-all">
+            <i class="fas fa-umbrella-beach"></i>
+          </div>
+          <h3 class="text-lg font-serif font-bold text-white mb-2">Outdoor Balcony</h3>
+          <p class="text-sm text-neutral-400 leading-relaxed mb-4">
+            Bask in breezy afternoons and vibrant evening skies overlooking Six Mile. Surrounded by natural greenery and striped awnings.
+          </p>
+          <a href="gallery.html" class="text-xs font-semibold text-amber-400 hover:text-amber-300 flex items-center gap-1.5">
+            View Balcony Gallery <i class="fas fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+
+        <!-- Feature 2: Weekend Live Music -->
+        <div class="glass-card rounded-2xl p-6 border border-neutral-800/80 hover:border-amber-500/40 group">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 group-hover:bg-amber-500 group-hover:text-black transition-all">
+            <i class="fas fa-guitar"></i>
+          </div>
+          <h3 class="text-lg font-serif font-bold text-white mb-2">Live Music Sessions</h3>
+          <p class="text-sm text-neutral-400 leading-relaxed mb-4">
+            Unwind every weekend with soulful acoustic serenades, indie sets, and acoustic artists playing your favorite songs live.
+          </p>
+          <a href="experiences.html" class="text-xs font-semibold text-amber-400 hover:text-amber-300 flex items-center gap-1.5">
+            Check Upcoming Lineup <i class="fas fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+
+        <!-- Feature 3: Indian, Chinese & Continental -->
+        <div class="glass-card rounded-2xl p-6 border border-neutral-800/80 hover:border-amber-500/40 group">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 group-hover:bg-amber-500 group-hover:text-black transition-all">
+            <i class="fas fa-utensils"></i>
+          </div>
+          <h3 class="text-lg font-serif font-bold text-white mb-2">Tri-Cuisine Mastery</h3>
+          <p class="text-sm text-neutral-400 leading-relaxed mb-4">
+            From smoky Lassoni Chicken Tikka and Greek Spanakopita to Chermoula Fish and Teriyaki Chicken, each dish has a culinary soul.
+          </p>
+          <a href="menu.html" class="text-xs font-semibold text-amber-400 hover:text-amber-300 flex items-center gap-1.5">
+            Discover Food & Drinks <i class="fas fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+
+        <!-- Feature 4: Private Parties & Celebrations -->
+        <div class="glass-card rounded-2xl p-6 border border-neutral-800/80 hover:border-amber-500/40 group">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 group-hover:bg-amber-500 group-hover:text-black transition-all">
+            <i class="fas fa-birthday-cake"></i>
+          </div>
+          <h3 class="text-lg font-serif font-bold text-white mb-2">Custom Celebrations</h3>
+          <p class="text-sm text-neutral-400 leading-relaxed mb-4">
+            Custom party menus, balloon decor, curated multi-course spreads, and dedicated service for birthdays, anniversaries & kitty parties.
+          </p>
+          <a href="events.html" class="text-xs font-semibold text-amber-400 hover:text-amber-300 flex items-center gap-1.5">
+            Book Party Packages <i class="fas fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Starring Tonight & Chef Signature Creations -->
+  <section class="py-20 bg-[#0e0f12] relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="gold-badge text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest inline-block mb-3">
+          Culinary Masterpieces
+        </span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-white">
+          Starring On Your Table
+        </h2>
+        <p class="text-neutral-400 text-sm sm:text-base mt-3">
+          Handcrafted by our culinary artists using fresh regional produce, authentic slow-cooking methods, and refined global techniques.
+        </p>
+      </div>
+
+      <!-- Dish Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Dish 1: Lassoni Chicken Tikka (Real Photo) -->
+        <div class="glass-card rounded-2xl overflow-hidden border border-neutral-800 flex flex-col group">
+          <div class="img-zoom-wrap h-56 w-full relative">
+            <img src="assets/images/cropped/lassoni_tikka.jpg" alt="Lassoni Chicken Tikka" class="w-full h-full object-cover">
+            <div class="absolute top-3 left-3 flex gap-2">
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-amber-500 text-black uppercase tracking-wider">
+                Chef's Signature
+              </span>
+              <span class="px-2 py-1 rounded-full text-[10px] font-semibold bg-red-950/80 border border-red-500/40 text-red-300">
+                Non-Veg
+              </span>
+            </div>
+            <div class="absolute top-3 right-3 px-2 py-0.5 rounded-md bg-black/70 backdrop-blur-sm text-xs font-bold text-amber-400 flex items-center gap-1">
+              <i class="fas fa-star text-[10px]"></i> 4.9
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-grow">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-semibold text-neutral-400 uppercase tracking-wider">Indian Clay Tandoor</span>
+              <span class="text-lg font-bold text-amber-400 font-display">₹340</span>
+            </div>
+            <h3 class="text-xl font-serif font-bold text-white group-hover:text-amber-400 transition-colors mb-2">
+              Lassoni Chicken Tikka
+            </h3>
+            <p class="text-xs text-neutral-400 leading-relaxed flex-grow mb-4">
+              Starring tonight! Succulent chicken morsels infused with charred mountain garlic, hung yogurt marinade, and secret tandoori spice blend.
+            </p>
+            <div class="pt-4 border-t border-neutral-800/80 flex items-center justify-between gap-3">
+              <span class="text-[11px] text-neutral-400"><i class="fas fa-pepper-hot text-amber-500 mr-1"></i> Medium Spiced</span>
+              <button onclick="cart.addItem({id:'star-1', name:'Lassoni Chicken Tikka', price:340, image:'assets/images/cropped/lassoni_tikka.jpg', type:'non-veg'})" class="btn-gold text-xs py-2 px-3.5">
+                <i class="fas fa-plus"></i> Add to Order
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dish 2: Tomato & Basil Bruschetta (Real Photo) -->
+        <div class="glass-card rounded-2xl overflow-hidden border border-neutral-800 flex flex-col group">
+          <div class="img-zoom-wrap h-56 w-full relative">
+            <img src="assets/images/cropped/bruschetta.jpg" alt="Tomato & Basil Bruschetta" class="w-full h-full object-cover">
+            <div class="absolute top-3 left-3 flex gap-2">
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-emerald-600 text-white uppercase tracking-wider">
+                Vegetarian
+              </span>
+              <span class="px-2 py-1 rounded-full text-[10px] font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/30">
+                Continental
+              </span>
+            </div>
+            <div class="absolute top-3 right-3 px-2 py-0.5 rounded-md bg-black/70 backdrop-blur-sm text-xs font-bold text-amber-400 flex items-center gap-1">
+              <i class="fas fa-star text-[10px]"></i> 4.8
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-grow">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-semibold text-neutral-400 uppercase tracking-wider">Italian Antipasti</span>
+              <span class="text-lg font-bold text-amber-400 font-display">₹260</span>
+            </div>
+            <h3 class="text-xl font-serif font-bold text-white group-hover:text-amber-400 transition-colors mb-2">
+              Tomato & Basil Bruschetta
+            </h3>
+            <p class="text-xs text-neutral-400 leading-relaxed flex-grow mb-4">
+              Toasted artisan sourdough rubbed with fresh garlic, topped with marinated vine tomatoes, hand-torn fresh buffalo mozzarella, and fragrant basil pesto.
+            </p>
+            <div class="pt-4 border-t border-neutral-800/80 flex items-center justify-between gap-3">
+              <span class="text-[11px] text-neutral-400"><i class="fas fa-leaf text-emerald-400 mr-1"></i> Fresh Mozzarella</span>
+              <button onclick="cart.addItem({id:'star-2', name:'Tomato & Basil Bruschetta', price:260, image:'assets/images/cropped/bruschetta.jpg', type:'veg'})" class="btn-gold text-xs py-2 px-3.5">
+                <i class="fas fa-plus"></i> Add to Order
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dish 3: Spanakopita Veg (Real Photo) -->
+        <div class="glass-card rounded-2xl overflow-hidden border border-neutral-800 flex flex-col group">
+          <div class="img-zoom-wrap h-56 w-full relative">
+            <img src="assets/images/cropped/spanakopita.jpg" alt="Spanakopita Veg" class="w-full h-full object-cover">
+            <div class="absolute top-3 left-3 flex gap-2">
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-amber-500 text-black uppercase tracking-wider">
+                Greek Classic
+              </span>
+              <span class="px-2 py-1 rounded-full text-[10px] font-semibold bg-emerald-950/80 border border-emerald-500/40 text-emerald-300">
+                Veg
+              </span>
+            </div>
+            <div class="absolute top-3 right-3 px-2 py-0.5 rounded-md bg-black/70 backdrop-blur-sm text-xs font-bold text-amber-400 flex items-center gap-1">
+              <i class="fas fa-star text-[10px]"></i> 4.7
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-grow">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-semibold text-neutral-400 uppercase tracking-wider">Mediterranean</span>
+              <span class="text-lg font-bold text-amber-400 font-display">₹280</span>
+            </div>
+            <h3 class="text-xl font-serif font-bold text-white group-hover:text-amber-400 transition-colors mb-2">
+              Spanakopita (Greek Filo)
+            </h3>
+            <p class="text-xs text-neutral-400 leading-relaxed flex-grow mb-4">
+              Crisp golden-baked pastry parcels bursting with seasoned spinach, creamy Greek feta cheese, toasted herbs, and garlic dip.
+            </p>
+            <div class="pt-4 border-t border-neutral-800/80 flex items-center justify-between gap-3">
+              <span class="text-[11px] text-neutral-400"><i class="fas fa-cheese text-amber-300 mr-1"></i> Feta & Herbs</span>
+              <button onclick="cart.addItem({id:'star-3', name:'Spanakopita (Greek Filo)', price:280, image:'assets/images/cropped/spanakopita.jpg', type:'veg'})" class="btn-gold text-xs py-2 px-3.5">
+                <i class="fas fa-plus"></i> Add to Order
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dish 4: Chermoula Grilled Fish (Real Photo) -->
+        <div class="glass-card rounded-2xl overflow-hidden border border-neutral-800 flex flex-col group">
+          <div class="img-zoom-wrap h-56 w-full relative">
+            <img src="assets/images/cropped/chermoula_fish.jpg" alt="Chermoula Grilled Fish" class="w-full h-full object-cover">
+            <div class="absolute top-3 left-3 flex gap-2">
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-amber-500 text-black uppercase tracking-wider">
+                Seafood Gourmet
+              </span>
+              <span class="px-2 py-1 rounded-full text-[10px] font-semibold bg-red-950/80 border border-red-500/40 text-red-300">
+                Non-Veg
+              </span>
+            </div>
+            <div class="absolute top-3 right-3 px-2 py-0.5 rounded-md bg-black/70 backdrop-blur-sm text-xs font-bold text-amber-400 flex items-center gap-1">
+              <i class="fas fa-star text-[10px]"></i> 4.9
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-grow">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-semibold text-neutral-400 uppercase tracking-wider">Continental Main</span>
+              <span class="text-lg font-bold text-amber-400 font-display">₹460</span>
+            </div>
+            <h3 class="text-xl font-serif font-bold text-white group-hover:text-amber-400 transition-colors mb-2">
+              Chermoula Grilled Fish
+            </h3>
+            <p class="text-xs text-neutral-400 leading-relaxed flex-grow mb-4">
+              Fresh river sole fillet marinated in fragrant Moroccan chermoula herbs, grilled to tender perfection, served with charred broccoli and lemon caper butter.
+            </p>
+            <div class="pt-4 border-t border-neutral-800/80 flex items-center justify-between gap-3">
+              <span class="text-[11px] text-neutral-400"><i class="fas fa-fish text-sky-400 mr-1"></i> River Sole</span>
+              <button onclick="cart.addItem({id:'main-1', name:'Chermoula Grilled Fish', price:460, image:'assets/images/cropped/chermoula_fish.jpg', type:'non-veg'})" class="btn-gold text-xs py-2 px-3.5">
+                <i class="fas fa-plus"></i> Add to Order
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dish 5: Passionfruit Mojito (Real Photo) -->
+        <div class="glass-card rounded-2xl overflow-hidden border border-neutral-800 flex flex-col group">
+          <div class="img-zoom-wrap h-56 w-full relative">
+            <img src="assets/images/cropped/passionfruit_mojito.jpg" alt="Passionfruit Mojito" class="w-full h-full object-cover">
+            <div class="absolute top-3 left-3 flex gap-2">
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-amber-500 text-black uppercase tracking-wider">
+                Signature Mocktail
+              </span>
+            </div>
+            <div class="absolute top-3 right-3 px-2 py-0.5 rounded-md bg-black/70 backdrop-blur-sm text-xs font-bold text-amber-400 flex items-center gap-1">
+              <i class="fas fa-star text-[10px]"></i> 4.9
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-grow">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-semibold text-neutral-400 uppercase tracking-wider">Cold Beverage</span>
+              <span class="text-lg font-bold text-amber-400 font-display">₹190</span>
+            </div>
+            <h3 class="text-xl font-serif font-bold text-white group-hover:text-amber-400 transition-colors mb-2">
+              Passionfruit Mojito
+            </h3>
+            <p class="text-xs text-neutral-400 leading-relaxed flex-grow mb-4">
+              A zesty, effervescent tropical cooler with real passionfruit pulp, muddled fresh spearmint, lime chunks, and crushed mountain ice.
+            </p>
+            <div class="pt-4 border-t border-neutral-800/80 flex items-center justify-between gap-3">
+              <span class="text-[11px] text-neutral-400"><i class="fas fa-glass-martini-alt text-amber-400 mr-1"></i> Refreshing</span>
+              <button onclick="cart.addItem({id:'bev-1', name:'Passionfruit Mojito', price:190, image:'assets/images/cropped/passionfruit_mojito.jpg', type:'veg'})" class="btn-gold text-xs py-2 px-3.5">
+                <i class="fas fa-plus"></i> Add to Order
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dish 6: The Spiderman Freakshake (Real Photo) -->
+        <div class="glass-card rounded-2xl overflow-hidden border border-neutral-800 flex flex-col group">
+          <div class="img-zoom-wrap h-56 w-full relative">
+            <img src="assets/images/cropped/spiderman_shake.jpg" alt="Spiderman Freakshake" class="w-full h-full object-cover">
+            <div class="absolute top-3 left-3 flex gap-2">
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-pink-600 text-white uppercase tracking-wider">
+                Viral Special
+              </span>
+            </div>
+            <div class="absolute top-3 right-3 px-2 py-0.5 rounded-md bg-black/70 backdrop-blur-sm text-xs font-bold text-amber-400 flex items-center gap-1">
+              <i class="fas fa-star text-[10px]"></i> 5.0
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-grow">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-semibold text-neutral-400 uppercase tracking-wider">Dessert Freakshake</span>
+              <span class="text-lg font-bold text-amber-400 font-display">₹270</span>
+            </div>
+            <h3 class="text-xl font-serif font-bold text-white group-hover:text-amber-400 transition-colors mb-2">
+              The Spiderman Freakshake
+            </h3>
+            <p class="text-xs text-neutral-400 leading-relaxed flex-grow mb-4">
+              "The only trap you'll love getting caught in!" Strawberry velvet thickshake crowned with whipped cream, marshmallow web lace, and sweet delights.
+            </p>
+            <div class="pt-4 border-t border-neutral-800/80 flex items-center justify-between gap-3">
+              <span class="text-[11px] text-neutral-400"><i class="fas fa-ice-cream text-pink-400 mr-1"></i> Sweet Delight</span>
+              <button onclick="cart.addItem({id:'bev-4', name:'The Spiderman Freakshake', price:270, image:'assets/images/cropped/spiderman_shake.jpg', type:'veg'})" class="btn-gold text-xs py-2 px-3.5">
+                <i class="fas fa-plus"></i> Add to Order
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- View Menu Callout -->
+      <div class="text-center mt-12">
+        <a href="menu.html" class="btn-outline-gold text-sm py-3.5 px-8 inline-flex items-center gap-3">
+          <span>View Complete 30+ Item Menu (Indian, Chinese, Continental)</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Live Music & Weekend Experience Banner -->
+  <section class="py-16 bg-gradient-to-b from-neutral-950 via-[#121419] to-neutral-950 border-y border-amber-500/20 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <div class="lg:col-span-6 space-y-5">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-xs font-bold uppercase tracking-wider">
+            <span class="live-pulse-dot" style="width: 8px; height: 8px;"></span> Live Performances
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-white">
+            Acoustic Nights & Musical Vibes At Palate Story
+          </h2>
+          <p class="text-sm sm:text-base text-neutral-300 leading-relaxed font-light">
+            There's nothing quite like sipping an iced cappuccino or sharing hot tandoori kebabs while listening to Guwahati's finest acoustic vocalists and guitarists. Featuring live acts like <strong class="text-amber-400">Rahul Gohain</strong> and emerging indie musicians every weekend!
+          </p>
+
+          <div class="grid grid-cols-2 gap-4 pt-2">
+            <div class="p-4 rounded-xl bg-neutral-900/80 border border-neutral-800">
+              <i class="fas fa-calendar-alt text-amber-400 text-lg mb-2"></i>
+              <h4 class="font-bold text-white text-sm">Every Friday & Saturday</h4>
+              <p class="text-xs text-neutral-400">8:00 PM – 10:30 PM</p>
+            </div>
+            <div class="p-4 rounded-xl bg-neutral-900/80 border border-neutral-800">
+              <i class="fas fa-cocktail text-amber-400 text-lg mb-2"></i>
+              <h4 class="font-bold text-white text-sm">Special Cocktails & Platters</h4>
+              <p class="text-xs text-neutral-400">Exclusive weekend menu pairings</p>
+            </div>
+          </div>
+
+          <div class="pt-2 flex flex-wrap gap-4">
+            <a href="experiences.html" class="btn-gold text-xs py-3 px-6">
+              <i class="fas fa-ticket-alt"></i> See Full Schedule
+            </a>
+            <a href="reservations.html" class="btn-outline-gold text-xs py-3 px-6">
+              Reserve Front-Row Table
+            </a>
+          </div>
+        </div>
+
+        <!-- Real Live Music Poster & Live Artist Images -->
+        <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+          <div class="rounded-2xl overflow-hidden border border-amber-500/30 shadow-xl group">
+            <img src="assets/images/cropped/live_music_poster.jpg" alt="Rahul Gohain Live Music at Palate Story" class="w-full h-64 sm:h-72 object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="rounded-2xl overflow-hidden border border-amber-500/30 shadow-xl group">
+            <img src="assets/images/cropped/live_musician.jpg" alt="Acoustic Singer on Stage" class="w-full h-64 sm:h-72 object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Celebrations & Private Parties Showcase -->
+  <section class="py-20 bg-[#0e0f12]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Image Collage from Real Celebrations -->
+        <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+          <div class="space-y-4">
+            <div class="rounded-2xl overflow-hidden border border-neutral-800 shadow-lg">
+              <img src="assets/images/cropped/varenya_birthday.jpg" alt="Birthday Party Celebrations at Palate Story" class="w-full h-48 sm:h-56 object-cover">
+            </div>
+            <div class="rounded-2xl overflow-hidden border border-neutral-800 shadow-lg">
+              <img src="assets/images/cropped/interior_birthday.jpg" alt="Birthday Balloons and Wooden Slats" class="w-full h-48 sm:h-56 object-cover">
+            </div>
+          </div>
+          <div class="space-y-4 pt-6">
+            <div class="rounded-2xl overflow-hidden border border-neutral-800 shadow-lg">
+              <img src="assets/images/cropped/birthday_memories.jpg" alt="Making Memories Around Our Table" class="w-full h-48 sm:h-56 object-cover">
+            </div>
+            <div class="rounded-2xl overflow-hidden border border-neutral-800 shadow-lg">
+              <img src="assets/images/cropped/custom_party_menu.jpg" alt="Custom Party Menus Crafted" class="w-full h-48 sm:h-56 object-cover">
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Text & Party Booking CTA -->
+        <div class="lg:col-span-6 space-y-6">
+          <span class="gold-badge text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest inline-block">
+            Milestones & Gatherings
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-white">
+            Custom Party Menus Crafted For Unforgettable Evenings
+          </h2>
+          <p class="text-sm sm:text-base text-neutral-300 leading-relaxed font-light">
+            Whether it's your child's 1st birthday, an intimate candlelit anniversary, a corporate farewell, or a lively reunion with friends — Palate Story turns moments into lifelong memories. We craft tailor-made menus, gorgeous balloon backdrops, ambient music, and attentive culinary service.
+          </p>
+
+          <ul class="space-y-3 text-sm text-neutral-300">
+            <li class="flex items-center gap-3">
+              <i class="fas fa-check-circle text-amber-400"></i>
+              <span>Curated 3-course and 4-course banquet spreads</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fas fa-check-circle text-amber-400"></i>
+              <span>Balloon arches, fairy light decor & cake stand setups</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fas fa-check-circle text-amber-400"></i>
+              <span>Private indoor booth sections and exclusive balcony access</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fas fa-check-circle text-amber-400"></i>
+              <span>Dedicated party host & culinary team assistance</span>
+            </li>
+          </ul>
+
+          <div class="pt-2 flex flex-wrap items-center gap-4">
+            <a href="events.html" class="btn-gold text-xs py-3 px-6">
+              <i class="fas fa-calculator"></i> Calculate Party Estimate
+            </a>
+            <a href="tel:+917099018429" class="btn-outline-gold text-xs py-3 px-6">
+              <i class="fas fa-phone-alt"></i> Call Host: 7099018429
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Google Reviews & Testimonials Section -->
+  <section class="py-16 bg-neutral-950 border-t border-neutral-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="flex text-amber-400 text-sm">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </span>
+            <span class="text-white font-bold text-sm">4.3 Rating on Google Maps</span>
+          </div>
+          <h2 class="text-3xl font-display font-bold text-white">What Our Guests Love</h2>
+        </div>
+        <p class="text-neutral-400 text-sm max-w-md mt-2 md:mt-0">
+          Genuine feedback from our patrons, food bloggers, and families in Guwahati.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Review 1 -->
+        <div class="glass-card rounded-2xl p-6 border border-neutral-800/80 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex text-amber-400 text-xs">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="text-xs sm:text-sm text-neutral-300 leading-relaxed italic">
+              "Palate Story is an absolute gem! From the moment you walk in, the warm ambiance and thoughtful design set the tone for a great dining experience. The food is absolutely delicious — every dish has a lot of flavor and is beautifully presented."
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-neutral-800/80 flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xs flex items-center justify-center">
+              AB
+            </div>
+            <div>
+              <h5 class="text-xs font-bold text-white">Abhilash Borah</h5>
+              <p class="text-[10px] text-neutral-400">Local Guide • Google Review</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="glass-card rounded-2xl p-6 border border-neutral-800/80 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex text-amber-400 text-xs">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="text-xs sm:text-sm text-neutral-300 leading-relaxed italic">
+              "We celebrated our daughter's birthday here! The staff was super helpful, the balloon decor was on point, and the customized party menu was praised by all our guests. The Lassoni Chicken Tikka and Chicken Confit were standout hits!"
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-neutral-800/80 flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xs flex items-center justify-center">
+              RD
+            </div>
+            <div>
+              <h5 class="text-xs font-bold text-white">Ritu Dutta</h5>
+              <p class="text-[10px] text-neutral-400">Family Diner • Google Review</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="glass-card rounded-2xl p-6 border border-neutral-800/80 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex text-amber-400 text-xs">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="text-xs sm:text-sm text-neutral-300 leading-relaxed italic">
+              "Went for a quick bite, honestly they managed to give us more than expected. We got their grilled chicken sandwich, fried momo, fries, and cappuccino. The momo stuffing was so flavorful and the balcony seating is wonderful in the evening."
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-neutral-800/80 flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xs flex items-center justify-center">
+              SG
+            </div>
+            <div>
+              <h5 class="text-xs font-bold text-white">S. Goswami</h5>
+              <p class="text-[10px] text-neutral-400">Guwahati Resident • Google Review</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Instagram Feed Strip (@palatestoryghy) -->
+  <section class="py-14 bg-[#0e0f12]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex items-center justify-between mb-8">
+        <div>
+          <span class="text-xs text-amber-400 font-semibold tracking-wider uppercase">Follow Our Journey</span>
+          <h3 class="text-2xl font-serif font-bold text-white">@palatestoryghy on Instagram</h3>
+        </div>
+        <a href="https://www.instagram.com/palatestoryghy/" target="_blank" class="btn-outline-gold text-xs py-2 px-4 flex items-center gap-2">
+          <i class="fab fa-instagram text-amber-400"></i> Follow Page
+        </a>
+      </div>
+
+      <!-- Real Instagram Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+        
+        <div class="img-zoom-wrap rounded-xl overflow-hidden aspect-square border border-neutral-800">
+          <img src="assets/images/cropped/bubblegum_bliss.jpg" alt="Bubblegum Bliss" class="w-full h-full object-cover">
+        </div>
+        <div class="img-zoom-wrap rounded-xl overflow-hidden aspect-square border border-neutral-800">
+          <img src="assets/images/cropped/balcony_girl.jpg" alt="Balcony Vibe" class="w-full h-full object-cover">
+        </div>
+        <div class="img-zoom-wrap rounded-xl overflow-hidden aspect-square border border-neutral-800">
+          <img src="assets/images/cropped/teriyaki_chicken.jpg" alt="Teriyaki Chicken" class="w-full h-full object-cover">
+        </div>
+        <div class="img-zoom-wrap rounded-xl overflow-hidden aspect-square border border-neutral-800">
+          <img src="assets/images/cropped/blue_lagoon.jpg" alt="Blue Lagoon Cooler" class="w-full h-full object-cover">
+        </div>
+        <div class="img-zoom-wrap rounded-xl overflow-hidden aspect-square border border-neutral-800">
+          <img src="assets/images/cropped/romesco_prawns.jpg" alt="Romesco Prawns" class="w-full h-full object-cover">
+        </div>
+        <div class="img-zoom-wrap rounded-xl overflow-hidden aspect-square border border-neutral-800">
+          <img src="assets/images/cropped/chef_artists.jpg" alt="Palate Story Culinary Chefs" class="w-full h-full object-cover">
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Location & Visit Banner -->
+  <section class="py-16 bg-neutral-950 border-t border-neutral-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="glass-card rounded-3xl p-8 sm:p-12 border border-amber-500/30 relative overflow-hidden">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <div class="lg:col-span-7 space-y-4">
+            <span class="gold-badge text-xs font-bold px-3 py-1 rounded-full uppercase">Visit Us In Guwahati</span>
+            <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-white">
+              Ready For A Flavorful Experience?
+            </h2>
+            <p class="text-neutral-300 text-sm sm:text-base leading-relaxed">
+              We are conveniently located right on GS Road, 2nd Floor, next to Six Mile Flyover. Walk-ins are always warmly welcomed, or reserve your table in advance for weekend live sessions & private parties.
+            </p>
+            <div class="flex flex-wrap items-center gap-6 pt-2 text-sm text-neutral-300">
+              <div class="flex items-center gap-2">
+                <i class="fas fa-map-marker-alt text-amber-400"></i>
+                <span>Near Six Mile Flyover, GS Road, Guwahati</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fas fa-phone text-amber-400"></i>
+                <span>+91 7099018429</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 flex flex-col sm:flex-row lg:flex-col gap-3 justify-center">
+            <a href="reservations.html" class="btn-gold text-center py-3.5 text-sm">
+              <i class="fas fa-calendar-check mr-2"></i> Book Table Online
+            </a>
+            <a href="contact.html" class="btn-outline-gold text-center py-3.5 text-sm">
+              <i class="fas fa-directions mr-2"></i> Get Driving Directions
+            </a>
+            <a href="https://maps.app.goo.gl/pXpBTow5EZE43PFFA" target="_blank" class="px-6 py-3 rounded-full bg-neutral-900 text-neutral-300 hover:text-white border border-neutral-800 text-center text-xs">
+              <i class="fab fa-google text-amber-400 mr-2"></i> Open in Google Maps
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#0a0b0e] text-neutral-400 text-sm border-t border-neutral-900 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        
+        <!-- Col 1: Brand Info (2 cols on lg) -->
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <img src="assets/images/cropped/logo.png" alt="Palate Story" class="w-12 h-12 rounded-full border border-amber-500/40">
+            <div>
+              <h3 class="font-display font-extrabold text-xl text-white tracking-wider">PALATE STORY</h3>
+              <p class="text-[10px] text-amber-400 tracking-widest font-semibold uppercase">Indian • Chinese • Continental</p>
+            </div>
+          </div>
+          <p class="text-xs text-neutral-400 leading-relaxed max-w-sm">
+            Igniting your taste buds with every dish, one bite at a time. A modern haven of soulful culinary classics, live acoustic melodies, and panoramic balcony seating in Guwahati.
+          </p>
+          <div class="flex items-center gap-3 text-neutral-400">
+            <a href="https://www.instagram.com/palatestoryghy/" target="_blank" class="w-9 h-9 rounded-full bg-neutral-900 border border-neutral-800 flex items-center justify-center hover:text-amber-400 hover:border-amber-400 transition-colors" title="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://maps.app.goo.gl/pXpBTow5EZE43PFFA" target="_blank" class="w-9 h-9 rounded-full bg-neutral-900 border border-neutral-800 flex items-center justify-center hover:text-amber-400 hover:border-amber-400 transition-colors" title="Google Maps">
+              <i class="fas fa-map-marked-alt"></i>
+            </a>
+            <a href="https://wa.me/917099018429" target="_blank" class="w-9 h-9 rounded-full bg-neutral-900 border border-neutral-800 flex items-center justify-center hover:text-emerald-400 hover:border-emerald-400 transition-colors" title="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+          <p class="text-[11px] text-neutral-500 pt-1">
+            Social Media Managed by <a href="https://instagram.com/clickmediaghy" target="_blank" class="text-amber-400 hover:underline">@clickmediaghy</a>
+          </p>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div>
+          <h4 class="font-serif font-bold text-white text-base mb-4">Explore</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="index.html" class="hover:text-amber-400 transition-colors">Home</a></li>
+            <li><a href="menu.html" class="hover:text-amber-400 transition-colors">Complete Menu</a></li>
+            <li><a href="about.html" class="hover:text-amber-400 transition-colors">Our Story & Chefs</a></li>
+            <li><a href="gallery.html" class="hover:text-amber-400 transition-colors">Photo Gallery</a></li>
+            <li><a href="order.html" class="hover:text-amber-400 transition-colors">Online Ordering</a></li>
+            <li><a href="faq.html" class="hover:text-amber-400 transition-colors">Guest FAQs</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Experiences & Parties -->
+        <div>
+          <h4 class="font-serif font-bold text-white text-base mb-4">Experiences</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="reservations.html" class="hover:text-amber-400 transition-colors">Book a Table</a></li>
+            <li><a href="events.html" class="hover:text-amber-400 transition-colors">Birthday & Party Packages</a></li>
+            <li><a href="experiences.html" class="hover:text-amber-400 transition-colors">Weekend Live Music</a></li>
+            <li><a href="gallery.html" class="hover:text-amber-400 transition-colors">Outdoor Balcony Patio</a></li>
+            <li><a href="menu.html?filter=beverages" class="hover:text-amber-400 transition-colors">Signature Mocktails & Shakes</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Location & Timings -->
+        <div>
+          <h4 class="font-serif font-bold text-white text-base mb-4">Visit Us</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li class="flex items-start gap-2">
+              <i class="fas fa-map-marker-alt text-amber-400 mt-1"></i>
+              <span>2nd Floor, GS Road, Near Six Mile Flyover, Guwahati, Assam 781022</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fas fa-phone-alt text-amber-400"></i>
+              <span>+91 7099018429</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fas fa-clock text-amber-400 mt-1"></i>
+              <div>
+                <p class="font-semibold text-white">Open Daily</p>
+                <p>11:30 AM – 10:30 PM</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 mt-10 border-t border-neutral-900 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 gap-4">
+        <p>© 2026 Palate Story Guwahati. All Rights Reserved.</p>
+        <div class="flex items-center gap-6">
+          <a href="contact.html" class="hover:text-neutral-400">Directions</a>
+          <a href="faq.html" class="hover:text-neutral-400">Privacy & Terms</a>
+          <a href="https://maps.app.goo.gl/pXpBTow5EZE43PFFA" target="_blank" class="text-amber-400 hover:underline">Google Maps Link</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Quick Actions -->
+  <div class="floating-actions">
+    <!-- WhatsApp Floating Trigger -->
+    <a href="https://wa.me/917099018429?text=Hello%20Palate%20Story!%20I%20would%20like%20to%20know%20more%20about%20table%20reservations%20and%20menu." target="_blank" class="floating-btn floating-btn-whatsapp" title="Chat on WhatsApp">
+      <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+    <!-- Floating Cart Trigger -->
+    <a href="order.html" class="floating-btn floating-btn-cart" title="View Order Cart">
+      <i class="fas fa-shopping-bag text-lg"></i>
+      <span class="cart-badge-count hidden">0</span>
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/menu-data.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
